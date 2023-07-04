@@ -1,6 +1,7 @@
 { lib, inputs, snowfall-inputs }:
 
 let
+  # Example comment here...
   inherit (inputs.nixpkgs.lib) assertMsg last;
 in
 {

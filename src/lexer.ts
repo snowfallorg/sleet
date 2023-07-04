@@ -664,6 +664,8 @@ export class Lexer {
 			case "assert":
 			case "or":
 			case "import":
+			case "if":
+			case "then":
 				return {
 					kind: TokenKind.Keyword,
 					value: chars,

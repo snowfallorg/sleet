@@ -19,6 +19,7 @@ export enum NodeKind {
 	Expr = "Expr",
 	BinaryExpr = "BinaryExpr",
 	SubExpr = "SubExpr",
+	Conditional = "Conditional",
 	Modifier = "Modifier",
 	LetIn = "LetIn",
 	Import = "Import",
@@ -129,6 +130,13 @@ export interface AssertModifierNode extends BaseNode {
 }
 
 export type ModifierNode = WithModifierNode | AssertModifierNode;
+
+export interface ConditionalNode extends BaseNode {
+	kind: NodeKind.Conditional;
+	condition: ExprNode;
+	then: ExprNode;
+	else: ExprNode;
+}
 
 export interface InterpNode extends BaseNode {
 	kind: NodeKind.Interp;
@@ -350,7 +358,8 @@ export type ValueNode =
 	| IdentifierNode
 	| LetInNode
 	| ImportNode
-	| NullNode;
+	| NullNode
+	| ConditionalNode;
 
 export type AstNode =
 	| RootNode
@@ -395,7 +404,8 @@ export type AstNode =
 	| InterpNode
 	| ImportNode
 	| NullNode
-	| FallbackNode;
+	| FallbackNode
+	| ConditionalNode;
 
 enum ParserState {
 	Default = "Default",
@@ -591,6 +601,10 @@ export class Parser {
 		let last: BinaryExprNode;
 
 		while (this.cursor < this.tokens.length) {
+			if (inFunctionCall || inList) {
+				break;
+			}
+
 			const op = this.lookahead(() => {
 				while (this.cursor < this.tokens.length) {
 					const token = this.peek();
@@ -1002,6 +1016,19 @@ export class Parser {
 			}
 
 			const expr = this.parseExpr(false, true);
+
+			if (items.length > 0) {
+				const prev = items[items.length - 1];
+
+				if (
+					expr.value.kind === NodeKind.SubExpr &&
+					prev.value.kind === NodeKind.SubExpr &&
+					prev.value.comments.after.length > 0
+				) {
+					expr.value.comments.before = prev.value.comments.after;
+					prev.value.comments.after = [];
+				}
+			}
 			items.push(expr);
 		}
 
@@ -1023,9 +1050,22 @@ export class Parser {
 
 		while (this.cursor < this.tokens.length) {
 			this.skipNewLines();
-			const comments = this.parseComments();
 
-			if (this.peek()?.kind === TokenKind.CloseCurly) {
+			const next = this.lookahead(() => {
+				while (this.cursor < this.tokens.length) {
+					const token = this.peek();
+
+					if (token.kind !== TokenKind.NewLine && token.kind !== TokenKind.Comment) {
+						return token;
+					}
+
+					this.consume();
+				}
+			});
+
+			if (next?.kind === TokenKind.CloseCurly) {
+				const comments = this.parseComments();
+
 				if (attrs.length > 0) {
 					attrs[attrs.length - 1].comments.push(...comments);
 				}
@@ -1450,7 +1490,7 @@ export class Parser {
 		};
 	}
 
-	parseKeyword(): LetInNode | ImportNode {
+	parseKeyword(): LetInNode | ImportNode | ConditionalNode {
 		const token = this.peek() as KeywordToken;
 
 		switch (token.value) {
@@ -1461,11 +1501,22 @@ export class Parser {
 
 				while (this.cursor < this.tokens.length) {
 					this.skipNewLines();
-					const comments = this.parseComments();
 
-					const next = this.peek();
+					const next = this.lookahead(() => {
+						while (this.cursor < this.tokens.length) {
+							const token = this.peek();
+
+							if (token.kind !== TokenKind.NewLine && token.kind !== TokenKind.Comment) {
+								return token;
+							}
+
+							this.consume();
+						}
+					});
 
 					if (next !== undefined && next?.kind === TokenKind.Keyword && next.value === "in") {
+						const comments = this.parseComments();
+
 						if (attrs.length > 0) {
 							attrs[attrs.length - 1].comments.push(...comments);
 						}
@@ -1495,7 +1546,7 @@ export class Parser {
 			case "import": {
 				this.consume();
 
-				const expr = this.parseExpr();
+				const expr = this.parseExpr(true);
 
 				return {
 					kind: NodeKind.Import,
@@ -1503,6 +1554,32 @@ export class Parser {
 					loc: {
 						start: token.loc.start,
 						end: expr.loc.end,
+					},
+				};
+			}
+			case "if": {
+				this.consume();
+
+				const condition = this.parseExpr();
+
+				// Skip then
+				this.consume();
+
+				const thenBody = this.parseExpr();
+
+				// Skip else
+				this.consume();
+
+				const elseBody = this.parseExpr();
+
+				return {
+					kind: NodeKind.Conditional,
+					condition,
+					then: thenBody,
+					else: elseBody,
+					loc: {
+						start: token.loc.start,
+						end: elseBody.loc.end,
 					},
 				};
 			}

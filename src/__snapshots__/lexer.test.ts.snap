@@ -163,15 +163,42 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     },
   },
   {
-    "kind": "Keyword",
+    "kind": "Comment",
     "loc": {
       "end": {
-        "col": 9,
+        "col": 27,
         "line": 4,
       },
       "start": {
         "col": 2,
         "line": 4,
+      },
+    },
+    "value": " Example comment here...",
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 5,
+      },
+      "start": {
+        "col": 27,
+        "line": 4,
+      },
+    },
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 9,
+        "line": 5,
+      },
+      "start": {
+        "col": 2,
+        "line": 5,
       },
     },
     "value": "inherit",
@@ -181,11 +208,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 11,
-        "line": 4,
+        "line": 5,
       },
       "start": {
         "col": 10,
-        "line": 4,
+        "line": 5,
       },
     },
   },
@@ -194,11 +221,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 17,
-        "line": 4,
+        "line": 5,
       },
       "start": {
         "col": 11,
-        "line": 4,
+        "line": 5,
       },
     },
     "value": "inputs",
@@ -208,11 +235,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 18,
-        "line": 4,
+        "line": 5,
       },
       "start": {
         "col": 17,
-        "line": 4,
+        "line": 5,
       },
     },
   },
@@ -221,11 +248,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 25,
-        "line": 4,
+        "line": 5,
       },
       "start": {
         "col": 18,
-        "line": 4,
+        "line": 5,
       },
     },
     "value": "nixpkgs",
@@ -235,11 +262,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 26,
-        "line": 4,
+        "line": 5,
       },
       "start": {
         "col": 25,
-        "line": 4,
+        "line": 5,
       },
     },
   },
@@ -248,11 +275,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 29,
-        "line": 4,
+        "line": 5,
       },
       "start": {
         "col": 26,
-        "line": 4,
+        "line": 5,
       },
     },
     "value": "lib",
@@ -262,11 +289,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 30,
-        "line": 4,
+        "line": 5,
       },
       "start": {
         "col": 29,
-        "line": 4,
+        "line": 5,
       },
     },
   },
@@ -275,11 +302,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 40,
-        "line": 4,
+        "line": 5,
       },
       "start": {
         "col": 31,
-        "line": 4,
+        "line": 5,
       },
     },
     "value": "assertMsg",
@@ -289,11 +316,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 45,
-        "line": 4,
+        "line": 5,
       },
       "start": {
         "col": 41,
-        "line": 4,
+        "line": 5,
       },
     },
     "value": "last",
@@ -303,11 +330,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 46,
-        "line": 4,
+        "line": 5,
       },
       "start": {
         "col": 45,
-        "line": 4,
+        "line": 5,
       },
     },
   },
@@ -316,11 +343,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 5,
+        "line": 6,
       },
       "start": {
         "col": 46,
-        "line": 4,
+        "line": 5,
       },
     },
   },
@@ -329,11 +356,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 2,
-        "line": 5,
+        "line": 6,
       },
       "start": {
         "col": 0,
-        "line": 5,
+        "line": 6,
       },
     },
     "value": "in",
@@ -343,11 +370,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 6,
+        "line": 7,
       },
       "start": {
         "col": 2,
-        "line": 5,
+        "line": 6,
       },
     },
   },
@@ -356,11 +383,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 1,
-        "line": 6,
+        "line": 7,
       },
       "start": {
         "col": 0,
-        "line": 6,
+        "line": 7,
       },
     },
   },
@@ -369,11 +396,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 7,
+        "line": 8,
       },
       "start": {
         "col": 1,
-        "line": 6,
+        "line": 7,
       },
     },
   },
@@ -382,11 +409,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 9,
-        "line": 7,
+        "line": 8,
       },
       "start": {
         "col": 2,
-        "line": 7,
+        "line": 8,
       },
     },
     "value": "network",
@@ -396,11 +423,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 11,
-        "line": 7,
+        "line": 8,
       },
       "start": {
         "col": 10,
-        "line": 7,
+        "line": 8,
       },
     },
   },
@@ -409,11 +436,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 13,
-        "line": 7,
+        "line": 8,
       },
       "start": {
         "col": 12,
-        "line": 7,
+        "line": 8,
       },
     },
   },
@@ -422,11 +449,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 8,
+        "line": 9,
       },
       "start": {
         "col": 13,
-        "line": 7,
+        "line": 8,
       },
     },
   },
@@ -435,11 +462,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 63,
-        "line": 8,
+        "line": 9,
       },
       "start": {
         "col": 4,
-        "line": 8,
+        "line": 9,
       },
     },
     "value": " Split an address to get its host name or ip and its port.",
@@ -449,11 +476,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 9,
+        "line": 10,
       },
       "start": {
         "col": 63,
-        "line": 8,
+        "line": 9,
       },
     },
   },
@@ -462,11 +489,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 27,
-        "line": 9,
+        "line": 10,
       },
       "start": {
         "col": 4,
-        "line": 9,
+        "line": 10,
       },
     },
     "value": " Type: String -> Attrs",
@@ -476,11 +503,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 10,
+        "line": 11,
       },
       "start": {
         "col": 27,
-        "line": 9,
+        "line": 10,
       },
     },
   },
@@ -489,11 +516,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 45,
-        "line": 10,
+        "line": 11,
       },
       "start": {
         "col": 4,
-        "line": 10,
+        "line": 11,
       },
     },
     "value": " Usage: get-address-parts \\"bismuth:3000\\"",
@@ -503,11 +530,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 11,
+        "line": 12,
       },
       "start": {
         "col": 45,
-        "line": 10,
+        "line": 11,
       },
     },
   },
@@ -516,11 +543,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 52,
-        "line": 11,
+        "line": 12,
       },
       "start": {
         "col": 4,
-        "line": 11,
+        "line": 12,
       },
     },
     "value": "   result: { host = \\"bismuth\\"; port = \\"3000\\"; }",
@@ -530,11 +557,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 12,
+        "line": 13,
       },
       "start": {
         "col": 52,
-        "line": 11,
+        "line": 12,
       },
     },
   },
@@ -543,11 +570,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 21,
-        "line": 12,
+        "line": 13,
       },
       "start": {
         "col": 4,
-        "line": 12,
+        "line": 13,
       },
     },
     "value": "get-address-parts",
@@ -557,11 +584,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 23,
-        "line": 12,
+        "line": 13,
       },
       "start": {
         "col": 22,
-        "line": 12,
+        "line": 13,
       },
     },
   },
@@ -570,11 +597,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 31,
-        "line": 12,
+        "line": 13,
       },
       "start": {
         "col": 24,
-        "line": 12,
+        "line": 13,
       },
     },
     "value": "address",
@@ -584,11 +611,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 32,
-        "line": 12,
+        "line": 13,
       },
       "start": {
         "col": 31,
-        "line": 12,
+        "line": 13,
       },
     },
   },
@@ -597,11 +624,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 13,
+        "line": 14,
       },
       "start": {
         "col": 32,
-        "line": 12,
+        "line": 13,
       },
     },
   },
@@ -610,11 +637,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 9,
-        "line": 13,
+        "line": 14,
       },
       "start": {
         "col": 6,
-        "line": 13,
+        "line": 14,
       },
     },
     "value": "let",
@@ -624,11 +651,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 14,
+        "line": 15,
       },
       "start": {
         "col": 9,
-        "line": 13,
+        "line": 14,
       },
     },
   },
@@ -637,11 +664,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 21,
-        "line": 14,
+        "line": 15,
       },
       "start": {
         "col": 8,
-        "line": 14,
+        "line": 15,
       },
     },
     "value": "address-parts",
@@ -651,11 +678,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 23,
-        "line": 14,
+        "line": 15,
       },
       "start": {
         "col": 22,
-        "line": 14,
+        "line": 15,
       },
     },
   },
@@ -664,11 +691,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 32,
-        "line": 14,
+        "line": 15,
       },
       "start": {
         "col": 24,
-        "line": 14,
+        "line": 15,
       },
     },
     "value": "builtins",
@@ -678,11 +705,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 33,
-        "line": 14,
+        "line": 15,
       },
       "start": {
         "col": 32,
-        "line": 14,
+        "line": 15,
       },
     },
   },
@@ -691,11 +718,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 38,
-        "line": 14,
+        "line": 15,
       },
       "start": {
         "col": 33,
-        "line": 14,
+        "line": 15,
       },
     },
     "value": "split",
@@ -705,11 +732,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 42,
-        "line": 14,
+        "line": 15,
       },
       "start": {
         "col": 39,
-        "line": 14,
+        "line": 15,
       },
     },
     "multiline": false,
@@ -722,11 +749,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 50,
-        "line": 14,
+        "line": 15,
       },
       "start": {
         "col": 43,
-        "line": 14,
+        "line": 15,
       },
     },
     "value": "address",
@@ -736,11 +763,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 51,
-        "line": 14,
+        "line": 15,
       },
       "start": {
         "col": 50,
-        "line": 14,
+        "line": 15,
       },
     },
   },
@@ -749,11 +776,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 15,
+        "line": 16,
       },
       "start": {
         "col": 51,
-        "line": 14,
+        "line": 15,
       },
     },
   },
@@ -762,11 +789,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 10,
-        "line": 15,
+        "line": 16,
       },
       "start": {
         "col": 8,
-        "line": 15,
+        "line": 16,
       },
     },
     "value": "ip",
@@ -776,11 +803,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 12,
-        "line": 15,
+        "line": 16,
       },
       "start": {
         "col": 11,
-        "line": 15,
+        "line": 16,
       },
     },
   },
@@ -789,11 +816,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 21,
-        "line": 15,
+        "line": 16,
       },
       "start": {
         "col": 13,
-        "line": 15,
+        "line": 16,
       },
     },
     "value": "builtins",
@@ -803,11 +830,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 22,
-        "line": 15,
+        "line": 16,
       },
       "start": {
         "col": 21,
-        "line": 15,
+        "line": 16,
       },
     },
   },
@@ -816,11 +843,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 26,
-        "line": 15,
+        "line": 16,
       },
       "start": {
         "col": 22,
-        "line": 15,
+        "line": 16,
       },
     },
     "value": "head",
@@ -830,11 +857,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 40,
-        "line": 15,
+        "line": 16,
       },
       "start": {
         "col": 27,
-        "line": 15,
+        "line": 16,
       },
     },
     "value": "address-parts",
@@ -844,11 +871,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 41,
-        "line": 15,
+        "line": 16,
       },
       "start": {
         "col": 40,
-        "line": 15,
+        "line": 16,
       },
     },
   },
@@ -857,11 +884,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 41,
-        "line": 15,
+        "line": 16,
       },
     },
   },
@@ -870,11 +897,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 12,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 8,
-        "line": 16,
+        "line": 17,
       },
     },
     "value": "host",
@@ -884,24 +911,24 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 14,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 13,
-        "line": 16,
+        "line": 17,
       },
     },
   },
   {
-    "kind": "Identifier",
+    "kind": "Keyword",
     "loc": {
       "end": {
         "col": 17,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 15,
-        "line": 16,
+        "line": 17,
       },
     },
     "value": "if",
@@ -911,11 +938,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 20,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 18,
-        "line": 16,
+        "line": 17,
       },
     },
     "value": "ip",
@@ -925,11 +952,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 23,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 21,
-        "line": 16,
+        "line": 17,
       },
     },
   },
@@ -938,11 +965,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 26,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 24,
-        "line": 16,
+        "line": 17,
       },
     },
     "multiline": false,
@@ -951,15 +978,15 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     ],
   },
   {
-    "kind": "Identifier",
+    "kind": "Keyword",
     "loc": {
       "end": {
         "col": 31,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 27,
-        "line": 16,
+        "line": 17,
       },
     },
     "value": "then",
@@ -969,11 +996,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 43,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 32,
-        "line": 16,
+        "line": 17,
       },
     },
     "multiline": false,
@@ -986,11 +1013,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 48,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 44,
-        "line": 16,
+        "line": 17,
       },
     },
     "value": "else",
@@ -1000,11 +1027,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 51,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 49,
-        "line": 16,
+        "line": 17,
       },
     },
     "value": "ip",
@@ -1014,11 +1041,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 52,
-        "line": 16,
+        "line": 17,
       },
       "start": {
         "col": 51,
-        "line": 16,
+        "line": 17,
       },
     },
   },
@@ -1027,11 +1054,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 52,
-        "line": 16,
+        "line": 17,
       },
     },
   },
@@ -1040,11 +1067,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 12,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 8,
-        "line": 17,
+        "line": 18,
       },
     },
     "value": "port",
@@ -1054,24 +1081,24 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 14,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 13,
-        "line": 17,
+        "line": 18,
       },
     },
   },
   {
-    "kind": "Identifier",
+    "kind": "Keyword",
     "loc": {
       "end": {
         "col": 17,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 15,
-        "line": 17,
+        "line": 18,
       },
     },
     "value": "if",
@@ -1081,11 +1108,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 26,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 18,
-        "line": 17,
+        "line": 18,
       },
     },
     "value": "builtins",
@@ -1095,11 +1122,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 27,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 26,
-        "line": 17,
+        "line": 18,
       },
     },
   },
@@ -1108,11 +1135,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 33,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 27,
-        "line": 17,
+        "line": 18,
       },
     },
     "value": "length",
@@ -1122,11 +1149,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 47,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 34,
-        "line": 17,
+        "line": 18,
       },
     },
     "value": "address-parts",
@@ -1136,11 +1163,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 50,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 48,
-        "line": 17,
+        "line": 18,
       },
     },
   },
@@ -1149,25 +1176,25 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 52,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 51,
-        "line": 17,
+        "line": 18,
       },
     },
     "value": 3,
   },
   {
-    "kind": "Identifier",
+    "kind": "Keyword",
     "loc": {
       "end": {
         "col": 57,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 53,
-        "line": 17,
+        "line": 18,
       },
     },
     "value": "then",
@@ -1177,11 +1204,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 60,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 58,
-        "line": 17,
+        "line": 18,
       },
     },
     "multiline": false,
@@ -1194,11 +1221,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 65,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 61,
-        "line": 17,
+        "line": 18,
       },
     },
     "value": "else",
@@ -1208,11 +1235,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 70,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 66,
-        "line": 17,
+        "line": 18,
       },
     },
     "value": "last",
@@ -1222,11 +1249,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 84,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 71,
-        "line": 17,
+        "line": 18,
       },
     },
     "value": "address-parts",
@@ -1236,11 +1263,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 85,
-        "line": 17,
+        "line": 18,
       },
       "start": {
         "col": 84,
-        "line": 17,
+        "line": 18,
       },
     },
   },
@@ -1249,11 +1276,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 18,
+        "line": 19,
       },
       "start": {
         "col": 85,
-        "line": 17,
+        "line": 18,
       },
     },
   },
@@ -1262,11 +1289,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 8,
-        "line": 18,
+        "line": 19,
       },
       "start": {
         "col": 6,
-        "line": 18,
+        "line": 19,
       },
     },
     "value": "in",
@@ -1276,11 +1303,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 19,
+        "line": 20,
       },
       "start": {
         "col": 8,
-        "line": 18,
+        "line": 19,
       },
     },
   },
@@ -1289,11 +1316,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 7,
-        "line": 19,
+        "line": 20,
       },
       "start": {
         "col": 6,
-        "line": 19,
+        "line": 20,
       },
     },
   },
@@ -1302,11 +1329,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 15,
-        "line": 19,
+        "line": 20,
       },
       "start": {
         "col": 8,
-        "line": 19,
+        "line": 20,
       },
     },
     "value": "inherit",
@@ -1316,11 +1343,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 20,
-        "line": 19,
+        "line": 20,
       },
       "start": {
         "col": 16,
-        "line": 19,
+        "line": 20,
       },
     },
     "value": "host",
@@ -1330,11 +1357,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 25,
-        "line": 19,
+        "line": 20,
       },
       "start": {
         "col": 21,
-        "line": 19,
+        "line": 20,
       },
     },
     "value": "port",
@@ -1344,11 +1371,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 26,
-        "line": 19,
+        "line": 20,
       },
       "start": {
         "col": 25,
-        "line": 19,
+        "line": 20,
       },
     },
   },
@@ -1357,11 +1384,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 28,
-        "line": 19,
+        "line": 20,
       },
       "start": {
         "col": 27,
-        "line": 19,
+        "line": 20,
       },
     },
   },
@@ -1370,24 +1397,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 29,
-        "line": 19,
-      },
-      "start": {
-        "col": 28,
-        "line": 19,
-      },
-    },
-  },
-  {
-    "kind": "NewLine",
-    "loc": {
-      "end": {
-        "col": 0,
         "line": 20,
       },
       "start": {
-        "col": 29,
-        "line": 19,
+        "col": 28,
+        "line": 20,
       },
     },
   },
@@ -1399,8 +1413,21 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "line": 21,
       },
       "start": {
-        "col": 0,
+        "col": 29,
         "line": 20,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 22,
+      },
+      "start": {
+        "col": 0,
+        "line": 21,
       },
     },
   },
@@ -1409,11 +1436,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 16,
-        "line": 21,
+        "line": 22,
       },
       "start": {
         "col": 4,
-        "line": 21,
+        "line": 22,
       },
     },
     "value": "create-proxy",
@@ -1423,11 +1450,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 18,
-        "line": 21,
+        "line": 22,
       },
       "start": {
         "col": 17,
-        "line": 21,
+        "line": 22,
       },
     },
   },
@@ -1436,11 +1463,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 22,
+        "line": 23,
       },
       "start": {
         "col": 18,
-        "line": 21,
+        "line": 22,
       },
     },
   },
@@ -1449,11 +1476,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 7,
-        "line": 22,
+        "line": 23,
       },
       "start": {
         "col": 6,
-        "line": 22,
+        "line": 23,
       },
     },
   },
@@ -1462,11 +1489,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 12,
-        "line": 22,
+        "line": 23,
       },
       "start": {
         "col": 8,
-        "line": 22,
+        "line": 23,
       },
     },
     "value": "port",
@@ -1476,11 +1503,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 14,
-        "line": 22,
+        "line": 23,
       },
       "start": {
         "col": 13,
-        "line": 22,
+        "line": 23,
       },
     },
   },
@@ -1489,11 +1516,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 19,
-        "line": 22,
+        "line": 23,
       },
       "start": {
         "col": 15,
-        "line": 22,
+        "line": 23,
       },
     },
   },
@@ -1502,11 +1529,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 23,
+        "line": 24,
       },
       "start": {
         "col": 19,
-        "line": 22,
+        "line": 23,
       },
     },
   },
@@ -1515,11 +1542,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 7,
-        "line": 23,
+        "line": 24,
       },
       "start": {
         "col": 6,
-        "line": 23,
+        "line": 24,
       },
     },
   },
@@ -1528,11 +1555,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 12,
-        "line": 23,
+        "line": 24,
       },
       "start": {
         "col": 8,
-        "line": 23,
+        "line": 24,
       },
     },
     "value": "host",
@@ -1542,11 +1569,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 14,
-        "line": 23,
+        "line": 24,
       },
       "start": {
         "col": 13,
-        "line": 23,
+        "line": 24,
       },
     },
   },
@@ -1555,11 +1582,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 26,
-        "line": 23,
+        "line": 24,
       },
       "start": {
         "col": 15,
-        "line": 23,
+        "line": 24,
       },
     },
     "multiline": false,
@@ -1572,11 +1599,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 24,
+        "line": 25,
       },
       "start": {
         "col": 26,
-        "line": 23,
+        "line": 24,
       },
     },
   },
@@ -1585,11 +1612,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 7,
-        "line": 24,
+        "line": 25,
       },
       "start": {
         "col": 6,
-        "line": 24,
+        "line": 25,
       },
     },
   },
@@ -1598,11 +1625,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 25,
-        "line": 24,
+        "line": 25,
       },
       "start": {
         "col": 8,
-        "line": 24,
+        "line": 25,
       },
     },
     "value": "proxy-web-sockets",
@@ -1612,11 +1639,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 27,
-        "line": 24,
+        "line": 25,
       },
       "start": {
         "col": 26,
-        "line": 24,
+        "line": 25,
       },
     },
   },
@@ -1625,11 +1652,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 33,
-        "line": 24,
+        "line": 25,
       },
       "start": {
         "col": 28,
-        "line": 24,
+        "line": 25,
       },
     },
     "value": false,
@@ -1639,11 +1666,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 25,
+        "line": 26,
       },
       "start": {
         "col": 33,
-        "line": 24,
+        "line": 25,
       },
     },
   },
@@ -1652,11 +1679,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 7,
-        "line": 25,
+        "line": 26,
       },
       "start": {
         "col": 6,
-        "line": 25,
+        "line": 26,
       },
     },
   },
@@ -1665,11 +1692,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 20,
-        "line": 25,
+        "line": 26,
       },
       "start": {
         "col": 8,
-        "line": 25,
+        "line": 26,
       },
     },
     "value": "extra-config",
@@ -1679,11 +1706,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 22,
-        "line": 25,
+        "line": 26,
       },
       "start": {
         "col": 21,
-        "line": 25,
+        "line": 26,
       },
     },
   },
@@ -1692,11 +1719,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 24,
-        "line": 25,
+        "line": 26,
       },
       "start": {
         "col": 23,
-        "line": 25,
+        "line": 26,
       },
     },
   },
@@ -1705,11 +1732,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 26,
-        "line": 25,
+        "line": 26,
       },
       "start": {
         "col": 25,
-        "line": 25,
+        "line": 26,
       },
     },
   },
@@ -1718,11 +1745,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 26,
+        "line": 27,
       },
       "start": {
         "col": 26,
-        "line": 25,
+        "line": 26,
       },
     },
   },
@@ -1731,11 +1758,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 7,
-        "line": 26,
+        "line": 27,
       },
       "start": {
         "col": 6,
-        "line": 26,
+        "line": 27,
       },
     },
   },
@@ -1744,11 +1771,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 8,
-        "line": 26,
+        "line": 27,
       },
       "start": {
         "col": 7,
-        "line": 26,
+        "line": 27,
       },
     },
   },
@@ -1757,11 +1784,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 8,
-        "line": 26,
+        "line": 27,
       },
     },
   },
@@ -1770,11 +1797,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 14,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 8,
-        "line": 27,
+        "line": 28,
       },
     },
     "value": "assert",
@@ -1784,11 +1811,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 24,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 15,
-        "line": 27,
+        "line": 28,
       },
     },
     "value": "assertMsg",
@@ -1798,11 +1825,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 26,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 25,
-        "line": 27,
+        "line": 28,
       },
     },
   },
@@ -1811,11 +1838,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 30,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 26,
-        "line": 27,
+        "line": 28,
       },
     },
     "value": "port",
@@ -1825,11 +1852,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 33,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 31,
-        "line": 27,
+        "line": 28,
       },
     },
   },
@@ -1838,11 +1865,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 36,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 34,
-        "line": 27,
+        "line": 28,
       },
     },
     "multiline": false,
@@ -1855,11 +1882,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 39,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 37,
-        "line": 27,
+        "line": 28,
       },
     },
   },
@@ -1868,11 +1895,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 44,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 40,
-        "line": 27,
+        "line": 28,
       },
     },
     "value": "port",
@@ -1882,11 +1909,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 47,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 45,
-        "line": 27,
+        "line": 28,
       },
     },
   },
@@ -1895,11 +1922,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 52,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 48,
-        "line": 27,
+        "line": 28,
       },
     },
   },
@@ -1908,11 +1935,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 53,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 52,
-        "line": 27,
+        "line": 28,
       },
     },
   },
@@ -1921,11 +1948,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 76,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 54,
-        "line": 27,
+        "line": 28,
       },
     },
     "multiline": false,
@@ -1938,11 +1965,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 77,
-        "line": 27,
+        "line": 28,
       },
       "start": {
         "col": 76,
-        "line": 27,
+        "line": 28,
       },
     },
   },
@@ -1951,11 +1978,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 28,
+        "line": 29,
       },
       "start": {
         "col": 77,
-        "line": 27,
+        "line": 28,
       },
     },
   },
@@ -1964,11 +1991,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 14,
-        "line": 28,
+        "line": 29,
       },
       "start": {
         "col": 8,
-        "line": 28,
+        "line": 29,
       },
     },
     "value": "assert",
@@ -1978,11 +2005,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 24,
-        "line": 28,
+        "line": 29,
       },
       "start": {
         "col": 15,
-        "line": 28,
+        "line": 29,
       },
     },
     "value": "assertMsg",
@@ -1992,11 +2019,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 26,
-        "line": 28,
+        "line": 29,
       },
       "start": {
         "col": 25,
-        "line": 28,
+        "line": 29,
       },
     },
   },
@@ -2005,11 +2032,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 30,
-        "line": 28,
+        "line": 29,
       },
       "start": {
         "col": 26,
-        "line": 28,
+        "line": 29,
       },
     },
     "value": "host",
@@ -2019,11 +2046,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 33,
-        "line": 28,
+        "line": 29,
       },
       "start": {
         "col": 31,
-        "line": 28,
+        "line": 29,
       },
     },
   },
@@ -2032,11 +2059,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 36,
-        "line": 28,
+        "line": 29,
       },
       "start": {
         "col": 34,
-        "line": 28,
+        "line": 29,
       },
     },
     "multiline": false,
@@ -2049,11 +2076,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 37,
-        "line": 28,
+        "line": 29,
       },
       "start": {
         "col": 36,
-        "line": 28,
+        "line": 29,
       },
     },
   },
@@ -2062,11 +2089,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 60,
-        "line": 28,
+        "line": 29,
       },
       "start": {
         "col": 38,
-        "line": 28,
+        "line": 29,
       },
     },
     "multiline": false,
@@ -2079,11 +2106,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 61,
-        "line": 28,
+        "line": 29,
       },
       "start": {
         "col": 60,
-        "line": 28,
+        "line": 29,
       },
     },
   },
@@ -2092,11 +2119,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 29,
+        "line": 30,
       },
       "start": {
         "col": 61,
-        "line": 28,
+        "line": 29,
       },
     },
   },
@@ -2105,11 +2132,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 20,
-        "line": 29,
+        "line": 30,
       },
       "start": {
         "col": 8,
-        "line": 29,
+        "line": 30,
       },
     },
     "value": "extra-config",
@@ -2119,11 +2146,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 23,
-        "line": 29,
+        "line": 30,
       },
       "start": {
         "col": 21,
-        "line": 29,
+        "line": 30,
       },
     },
   },
@@ -2132,11 +2159,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 25,
-        "line": 29,
+        "line": 30,
       },
       "start": {
         "col": 24,
-        "line": 29,
+        "line": 30,
       },
     },
   },
@@ -2145,11 +2172,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 25,
-        "line": 29,
+        "line": 30,
       },
     },
   },
@@ -2158,11 +2185,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 19,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 10,
-        "line": 30,
+        "line": 31,
       },
     },
     "value": "locations",
@@ -2172,11 +2199,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 21,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 20,
-        "line": 30,
+        "line": 31,
       },
     },
   },
@@ -2185,11 +2212,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 23,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 22,
-        "line": 30,
+        "line": 31,
       },
     },
   },
@@ -2198,11 +2225,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 35,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 23,
-        "line": 30,
+        "line": 31,
       },
     },
     "value": "extra-config",
@@ -2212,11 +2239,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 36,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 35,
-        "line": 30,
+        "line": 31,
       },
     },
   },
@@ -2225,11 +2252,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 45,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 36,
-        "line": 30,
+        "line": 31,
       },
     },
     "value": "locations",
@@ -2239,11 +2266,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 48,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 46,
-        "line": 30,
+        "line": 31,
       },
     },
     "value": "or",
@@ -2253,11 +2280,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 50,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 49,
-        "line": 30,
+        "line": 31,
       },
     },
   },
@@ -2266,11 +2293,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 52,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 51,
-        "line": 30,
+        "line": 31,
       },
     },
   },
@@ -2279,11 +2306,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 53,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 52,
-        "line": 30,
+        "line": 31,
       },
     },
   },
@@ -2292,11 +2319,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 56,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 54,
-        "line": 30,
+        "line": 31,
       },
     },
   },
@@ -2305,11 +2332,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 58,
-        "line": 30,
+        "line": 31,
       },
       "start": {
         "col": 57,
-        "line": 30,
+        "line": 31,
       },
     },
   },
@@ -2318,11 +2345,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 58,
-        "line": 30,
+        "line": 31,
       },
     },
   },
@@ -2331,11 +2358,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 15,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 12,
-        "line": 31,
+        "line": 32,
       },
     },
     "multiline": false,
@@ -2348,11 +2375,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 17,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 16,
-        "line": 31,
+        "line": 32,
       },
     },
   },
@@ -2361,11 +2388,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 19,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 18,
-        "line": 31,
+        "line": 32,
       },
     },
   },
@@ -2374,11 +2401,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 31,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 19,
-        "line": 31,
+        "line": 32,
       },
     },
     "value": "extra-config",
@@ -2388,11 +2415,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 32,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 31,
-        "line": 31,
+        "line": 32,
       },
     },
   },
@@ -2401,11 +2428,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 41,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 32,
-        "line": 31,
+        "line": 32,
       },
     },
     "value": "locations",
@@ -2415,11 +2442,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 42,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 41,
-        "line": 31,
+        "line": 32,
       },
     },
   },
@@ -2428,11 +2455,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 45,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 42,
-        "line": 31,
+        "line": 32,
       },
     },
     "multiline": false,
@@ -2445,11 +2472,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 48,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 46,
-        "line": 31,
+        "line": 32,
       },
     },
     "value": "or",
@@ -2459,11 +2486,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 50,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 49,
-        "line": 31,
+        "line": 32,
       },
     },
   },
@@ -2472,11 +2499,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 52,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 51,
-        "line": 31,
+        "line": 32,
       },
     },
   },
@@ -2485,11 +2512,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 53,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 52,
-        "line": 31,
+        "line": 32,
       },
     },
   },
@@ -2498,11 +2525,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 56,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 54,
-        "line": 31,
+        "line": 32,
       },
     },
   },
@@ -2511,11 +2538,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 58,
-        "line": 31,
+        "line": 32,
       },
       "start": {
         "col": 57,
-        "line": 31,
+        "line": 32,
       },
     },
   },
@@ -2524,11 +2551,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 32,
+        "line": 33,
       },
       "start": {
         "col": 58,
-        "line": 31,
+        "line": 32,
       },
     },
   },
@@ -2537,11 +2564,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 23,
-        "line": 32,
+        "line": 33,
       },
       "start": {
         "col": 14,
-        "line": 32,
+        "line": 33,
       },
     },
     "value": "proxyPass",
@@ -2551,11 +2578,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 25,
-        "line": 32,
+        "line": 33,
       },
       "start": {
         "col": 24,
-        "line": 32,
+        "line": 33,
       },
     },
   },
@@ -2564,11 +2591,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 33,
+        "line": 34,
       },
       "start": {
         "col": 25,
-        "line": 32,
+        "line": 33,
       },
     },
   },
@@ -2577,11 +2604,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 92,
-        "line": 33,
+        "line": 34,
       },
       "start": {
         "col": 16,
-        "line": 33,
+        "line": 34,
       },
     },
     "multiline": false,
@@ -2592,11 +2619,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "loc": {
           "end": {
             "col": 31,
-            "line": 33,
+            "line": 34,
           },
           "start": {
             "col": 24,
-            "line": 33,
+            "line": 34,
           },
         },
         "value": [
@@ -2605,11 +2632,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
             "loc": {
               "end": {
                 "col": 30,
-                "line": 33,
+                "line": 34,
               },
               "start": {
                 "col": 26,
-                "line": 33,
+                "line": 34,
               },
             },
             "value": "host",
@@ -2622,24 +2649,24 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "loc": {
           "end": {
             "col": 91,
-            "line": 33,
+            "line": 34,
           },
           "start": {
             "col": 31,
-            "line": 33,
+            "line": 34,
           },
         },
         "value": [
           {
-            "kind": "Identifier",
+            "kind": "Keyword",
             "loc": {
               "end": {
                 "col": 35,
-                "line": 33,
+                "line": 34,
               },
               "start": {
                 "col": 33,
-                "line": 33,
+                "line": 34,
               },
             },
             "value": "if",
@@ -2649,11 +2676,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
             "loc": {
               "end": {
                 "col": 40,
-                "line": 33,
+                "line": 34,
               },
               "start": {
                 "col": 36,
-                "line": 33,
+                "line": 34,
               },
             },
             "value": "port",
@@ -2663,11 +2690,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
             "loc": {
               "end": {
                 "col": 43,
-                "line": 33,
+                "line": 34,
               },
               "start": {
                 "col": 41,
-                "line": 33,
+                "line": 34,
               },
             },
           },
@@ -2676,24 +2703,24 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
             "loc": {
               "end": {
                 "col": 48,
-                "line": 33,
+                "line": 34,
               },
               "start": {
                 "col": 44,
-                "line": 33,
+                "line": 34,
               },
             },
           },
           {
-            "kind": "Identifier",
+            "kind": "Keyword",
             "loc": {
               "end": {
                 "col": 53,
-                "line": 33,
+                "line": 34,
               },
               "start": {
                 "col": 49,
-                "line": 33,
+                "line": 34,
               },
             },
             "value": "then",
@@ -2703,11 +2730,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
             "loc": {
               "end": {
                 "col": 82,
-                "line": 33,
+                "line": 34,
               },
               "start": {
                 "col": 54,
-                "line": 33,
+                "line": 34,
               },
             },
             "multiline": false,
@@ -2718,11 +2745,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
                 "loc": {
                   "end": {
                     "col": 81,
-                    "line": 33,
+                    "line": 34,
                   },
                   "start": {
                     "col": 56,
-                    "line": 33,
+                    "line": 34,
                   },
                 },
                 "value": [
@@ -2731,11 +2758,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
                     "loc": {
                       "end": {
                         "col": 66,
-                        "line": 33,
+                        "line": 34,
                       },
                       "start": {
                         "col": 58,
-                        "line": 33,
+                        "line": 34,
                       },
                     },
                     "value": "builtins",
@@ -2745,11 +2772,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
                     "loc": {
                       "end": {
                         "col": 67,
-                        "line": 33,
+                        "line": 34,
                       },
                       "start": {
                         "col": 66,
-                        "line": 33,
+                        "line": 34,
                       },
                     },
                   },
@@ -2758,11 +2785,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
                     "loc": {
                       "end": {
                         "col": 75,
-                        "line": 33,
+                        "line": 34,
                       },
                       "start": {
                         "col": 67,
-                        "line": 33,
+                        "line": 34,
                       },
                     },
                     "value": "toString",
@@ -2772,11 +2799,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
                     "loc": {
                       "end": {
                         "col": 80,
-                        "line": 33,
+                        "line": 34,
                       },
                       "start": {
                         "col": 76,
-                        "line": 33,
+                        "line": 34,
                       },
                     },
                     "value": "port",
@@ -2791,11 +2818,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
             "loc": {
               "end": {
                 "col": 87,
-                "line": 33,
+                "line": 34,
               },
               "start": {
                 "col": 83,
-                "line": 33,
+                "line": 34,
               },
             },
             "value": "else",
@@ -2805,11 +2832,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
             "loc": {
               "end": {
                 "col": 90,
-                "line": 33,
+                "line": 34,
               },
               "start": {
                 "col": 88,
-                "line": 33,
+                "line": 34,
               },
             },
             "multiline": false,
@@ -2827,24 +2854,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 93,
-        "line": 33,
-      },
-      "start": {
-        "col": 92,
-        "line": 33,
-      },
-    },
-  },
-  {
-    "kind": "NewLine",
-    "loc": {
-      "end": {
-        "col": 0,
         "line": 34,
       },
       "start": {
-        "col": 93,
-        "line": 33,
+        "col": 92,
+        "line": 34,
       },
     },
   },
@@ -2856,8 +2870,21 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "line": 35,
       },
       "start": {
-        "col": 0,
+        "col": 93,
         "line": 34,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 36,
+      },
+      "start": {
+        "col": 0,
+        "line": 35,
       },
     },
   },
@@ -2866,11 +2893,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 29,
-        "line": 35,
+        "line": 36,
       },
       "start": {
         "col": 14,
-        "line": 35,
+        "line": 36,
       },
     },
     "value": "proxyWebsockets",
@@ -2880,11 +2907,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 31,
-        "line": 35,
+        "line": 36,
       },
       "start": {
         "col": 30,
-        "line": 35,
+        "line": 36,
       },
     },
   },
@@ -2893,11 +2920,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 49,
-        "line": 35,
+        "line": 36,
       },
       "start": {
         "col": 32,
-        "line": 35,
+        "line": 36,
       },
     },
     "value": "proxy-web-sockets",
@@ -2907,11 +2934,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 50,
-        "line": 35,
+        "line": 36,
       },
       "start": {
         "col": 49,
-        "line": 35,
+        "line": 36,
       },
     },
   },
@@ -2920,49 +2947,10 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 36,
+        "line": 37,
       },
       "start": {
         "col": 50,
-        "line": 35,
-      },
-    },
-  },
-  {
-    "kind": "CloseCurly",
-    "loc": {
-      "end": {
-        "col": 13,
-        "line": 36,
-      },
-      "start": {
-        "col": 12,
-        "line": 36,
-      },
-    },
-  },
-  {
-    "kind": "Semi",
-    "loc": {
-      "end": {
-        "col": 14,
-        "line": 36,
-      },
-      "start": {
-        "col": 13,
-        "line": 36,
-      },
-    },
-  },
-  {
-    "kind": "NewLine",
-    "loc": {
-      "end": {
-        "col": 0,
-        "line": 37,
-      },
-      "start": {
-        "col": 14,
         "line": 36,
       },
     },
@@ -2971,11 +2959,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "kind": "CloseCurly",
     "loc": {
       "end": {
-        "col": 11,
+        "col": 13,
         "line": 37,
       },
       "start": {
-        "col": 10,
+        "col": 12,
         "line": 37,
       },
     },
@@ -2984,11 +2972,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "kind": "Semi",
     "loc": {
       "end": {
-        "col": 12,
+        "col": 14,
         "line": 37,
       },
       "start": {
-        "col": 11,
+        "col": 13,
         "line": 37,
       },
     },
@@ -3001,8 +2989,47 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "line": 38,
       },
       "start": {
-        "col": 12,
+        "col": 14,
         "line": 37,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 11,
+        "line": 38,
+      },
+      "start": {
+        "col": 10,
+        "line": 38,
+      },
+    },
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 12,
+        "line": 38,
+      },
+      "start": {
+        "col": 11,
+        "line": 38,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 39,
+      },
+      "start": {
+        "col": 12,
+        "line": 38,
       },
     },
   },
@@ -3011,11 +3038,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 9,
-        "line": 38,
+        "line": 39,
       },
       "start": {
         "col": 8,
-        "line": 38,
+        "line": 39,
       },
     },
   },
@@ -3024,11 +3051,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 10,
-        "line": 38,
+        "line": 39,
       },
       "start": {
         "col": 9,
-        "line": 38,
+        "line": 39,
       },
     },
   },
@@ -3037,11 +3064,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 0,
-        "line": 39,
+        "line": 40,
       },
       "start": {
         "col": 10,
-        "line": 38,
+        "line": 39,
       },
     },
   },
@@ -3050,11 +3077,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 3,
-        "line": 39,
+        "line": 40,
       },
       "start": {
         "col": 2,
-        "line": 39,
+        "line": 40,
       },
     },
   },
@@ -3063,36 +3090,10 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 4,
-        "line": 39,
+        "line": 40,
       },
       "start": {
         "col": 3,
-        "line": 39,
-      },
-    },
-  },
-  {
-    "kind": "NewLine",
-    "loc": {
-      "end": {
-        "col": 0,
-        "line": 40,
-      },
-      "start": {
-        "col": 4,
-        "line": 39,
-      },
-    },
-  },
-  {
-    "kind": "CloseCurly",
-    "loc": {
-      "end": {
-        "col": 1,
-        "line": 40,
-      },
-      "start": {
-        "col": 0,
         "line": 40,
       },
     },
@@ -3105,8 +3106,34 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "line": 41,
       },
       "start": {
-        "col": 1,
+        "col": 4,
         "line": 40,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 1,
+        "line": 41,
+      },
+      "start": {
+        "col": 0,
+        "line": 41,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 42,
+      },
+      "start": {
+        "col": 1,
+        "line": 41,
       },
     },
   },
@@ -3115,11 +3142,11 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     "loc": {
       "end": {
         "col": 1,
-        "line": 41,
+        "line": 42,
       },
       "start": {
         "col": 1,
-        "line": 41,
+        "line": 42,
       },
     },
   },

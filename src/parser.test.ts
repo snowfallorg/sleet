@@ -37,6 +37,14 @@ const pretty = (node: AstNode): string => {
 			return `#${node.value}`;
 		case NodeKind.BinaryExpr:
 			return `(${pretty(node.left)} ${pretty(node.op)} ${pretty(node.right)})`;
+		case NodeKind.Conditional:
+			return `if ${pretty(node.condition)} then\n${pretty(node.then)
+				.split("\n")
+				.map((x) => `\t${x}`)
+				.join("\n")}\nelse\n${pretty(node.else)
+				.split("\n")
+				.map((x) => `\t${x}`)
+				.join("\n")}`;
 		case NodeKind.String: {
 			const quotes = node.multiline ? "''" : '"';
 			return `${quotes}${node.value
@@ -91,12 +99,14 @@ const pretty = (node: AstNode): string => {
 				const prettyValue = pretty(node.value);
 				const lines = prettyValue.split("\n");
 				const value = [lines[0]].concat(lines.slice(1)).join("\n");
-				return `${pretty(node.name)} = ${value};`;
+				const comments = node.comments.map(pretty).join("\n");
+				return `${comments ? `${comments}\n` : ""}${pretty(node.name)} = ${value};`;
 			}
 			if (isInheritBinding(node)) {
 				const from = node.from ? `(${pretty(node.from)}) ` : "";
 				const bindings = node.value.map(pretty).join(" ");
-				return `inherit ${from}${bindings};`;
+				const comments = node.comments.map(pretty).join("\n");
+				return `${comments ? `${comments}\n` : ""}inherit ${from}${bindings};`;
 			}
 			throw new Error(`Unknown attr type: ${node}`);
 		}
@@ -114,7 +124,7 @@ const pretty = (node: AstNode): string => {
 			return `(${pretty(node.args)}:\n${pretty(node.body)
 				.split("\n")
 				.map((x) => `\t${x}`)
-				.join("\n")})`;
+				.join("\n")}\n)`;
 		case NodeKind.FnParams: {
 			if (isIdentifierFnParams(node)) {
 				return pretty(node.name);
@@ -156,6 +166,12 @@ const pretty = (node: AstNode): string => {
 			return "//";
 		case NodeKind.Fallback:
 			return "or";
+		case NodeKind.EqEq:
+			return "==";
+		case NodeKind.NotEq:
+			return "!=";
+		case NodeKind.Null:
+			return "null";
 		default:
 			console.log(node);
 			throw new Error(`Unknown node to prettify: "${node.kind}"`);
@@ -251,7 +267,8 @@ describe("Parser", () => {
 
 			expect(pretty(ast)).toMatchInlineSnapshot(`
 				"(x:
-					x)"
+					x
+				)"
 			`);
 		});
 
@@ -260,7 +277,8 @@ describe("Parser", () => {
 
 			expect(pretty(ast)).toMatchInlineSnapshot(`
 				"({ a ? true, b }:
-					a)"
+					a
+				)"
 			`);
 		});
 
@@ -269,7 +287,8 @@ describe("Parser", () => {
 
 			expect(pretty(ast)).toMatchInlineSnapshot(`
 				"(x @ { a ? true, b }:
-					x)"
+					x
+				)"
 			`);
 		});
 
@@ -278,8 +297,21 @@ describe("Parser", () => {
 
 			expect(pretty(ast)).toMatchInlineSnapshot(`
 				"(x @ { a ? true, b }:
-					x)"
+					x
+				)"
 			`);
+		});
+
+		it("should parse function calls", () => {
+			const ast = parser.parse(`builtins.trace x y`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot('"(builtins.trace x y)"');
+		});
+
+		it("should parse function calls with operators", () => {
+			const ast = parser.parse(`builtins.length x != 3`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot('"((builtins.length x) != 3)"');
 		});
 	});
 
@@ -335,7 +367,7 @@ describe("Parser", () => {
 		});
 
 		it("should parse lists", () => {
-			const ast = parser.parse(`[#one\n1\n#two\n { x = y: 4; } ]`);
+			const ast = parser.parse(`[#one\n1\n#two\n { x = y: 4; }\n#three\n]`);
 
 			expect(pretty(ast)).toMatchInlineSnapshot(`
 				"[
@@ -344,8 +376,10 @@ describe("Parser", () => {
 					#two
 					{
 						x = (y:
-							4);
+							4
+						);
 					}
+					#three
 				]"
 			`);
 		});
