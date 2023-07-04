@@ -1,5 +1,5 @@
 {
-	"name": "sleet",
+	"name": "@snowfallorg/sleet",
 	"version": "0.0.0",
 	"description": "A parser for Nix.",
 	"main": "dist/sleet.js",
