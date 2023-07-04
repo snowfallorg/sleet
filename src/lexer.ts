@@ -292,14 +292,14 @@ export class Lexer {
 	code = "";
 	cursor = 0;
 	line = 1;
-	col = 0;
+	col = 1;
 	tokens: Array<Token> = [];
 
 	lex(code: string) {
 		this.code = code;
 		this.cursor = 0;
 		this.line = 1;
-		this.col = 0;
+		this.col = 1;
 		this.tokens = [];
 
 		while (this.cursor < this.code.length) {
@@ -345,10 +345,10 @@ export class Lexer {
 			this.cursor++;
 			char = "\r\n";
 			this.line++;
-			this.col = 0;
+			this.col = 1;
 		} else if (char === "\n") {
 			this.line++;
-			this.col = 0;
+			this.col = 1;
 		}
 
 		return char;
