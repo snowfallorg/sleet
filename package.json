@@ -9,6 +9,9 @@
 		"build:types": "tsc ./src/index.ts --declaration --emitDeclarationOnly --outDir ./dist",
 		"test": "vitest"
 	},
+	"files": [
+		"dist/**"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/snowfallorg/sleet.git"
