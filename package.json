@@ -9,6 +9,9 @@
 		"build:types": "tsc ./src/index.ts --declaration --emitDeclarationOnly --outDir ./dist",
 		"test": "vitest"
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"files": [
 		"dist/**"
 	],
