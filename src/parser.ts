@@ -196,6 +196,7 @@ export interface PathNode extends BaseNode {
 
 export interface AttrsNode extends BaseNode {
 	kind: NodeKind.Attrs;
+	recursive: boolean;
 	value: Array<AttrNode>;
 }
 
@@ -1082,6 +1083,7 @@ export class Parser {
 		return {
 			kind: NodeKind.Attrs,
 			value: attrs,
+			recursive: false,
 			loc: {
 				start: openCurly.loc.start,
 				end: closeCurly.loc.end,
@@ -1490,7 +1492,7 @@ export class Parser {
 		};
 	}
 
-	parseKeyword(): LetInNode | ImportNode | ConditionalNode {
+	parseKeyword(): LetInNode | ImportNode | ConditionalNode | AttrsNode {
 		const token = this.peek() as KeywordToken;
 
 		switch (token.value) {
@@ -1582,6 +1584,16 @@ export class Parser {
 						end: elseBody.loc.end,
 					},
 				};
+			}
+			case "rec": {
+				this.consume();
+
+				const attrs = this.parseAttrs();
+
+				attrs.recursive = true;
+				attrs.loc.start = token.loc.start;
+
+				return attrs;
 			}
 			default:
 				throw new Error(`Unexpected keyword: ${token.value}`);

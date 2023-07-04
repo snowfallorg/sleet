@@ -81,11 +81,13 @@ const pretty = (node: AstNode): string => {
 				.map((x) => `\t${x}`)
 				.join("\n")}`;
 		case NodeKind.Attrs:
+			const rec = node.recursive ? "rec " : "";
+
 			if (node.value.length === 0) {
-				return "{}";
+				return `${rec}{}`;
 			}
 
-			return `{\n${node.value
+			return `${rec}{\n${node.value
 				.map(
 					(value) =>
 						`${pretty(value)
@@ -259,6 +261,12 @@ describe("Parser", () => {
 				x.y = true;
 			}"
 		`);
+	});
+
+	it("should parse recursive attrs", () => {
+		const ast = parser.parse(`rec { x = true; }`);
+
+		console.log(pretty(ast));
 	});
 
 	describe("Functions", () => {

@@ -337,6 +337,7 @@ exports[`Parser > Samples > Parses network.nix 1`] = `
                         "line": 7,
                       },
                     },
+                    "recursive": false,
                     "value": [
                       {
                         "comments": [],
@@ -408,6 +409,7 @@ exports[`Parser > Samples > Parses network.nix 1`] = `
                                   "line": 8,
                                 },
                               },
+                              "recursive": false,
                               "value": [
                                 {
                                   "comments": [
@@ -1631,6 +1633,7 @@ exports[`Parser > Samples > Parses network.nix 1`] = `
                                                         "line": 20,
                                                       },
                                                     },
+                                                    "recursive": false,
                                                     "value": [
                                                       {
                                                         "comments": [],
@@ -2056,6 +2059,7 @@ exports[`Parser > Samples > Parses network.nix 1`] = `
                                                         "line": 26,
                                                       },
                                                     },
+                                                    "recursive": false,
                                                     "value": [],
                                                   },
                                                 },
@@ -2834,6 +2838,7 @@ exports[`Parser > Samples > Parses network.nix 1`] = `
                                                     "line": 30,
                                                   },
                                                 },
+                                                "recursive": false,
                                                 "value": [
                                                   {
                                                     "comments": [],
@@ -2996,6 +3001,7 @@ exports[`Parser > Samples > Parses network.nix 1`] = `
                                                                       "line": 31,
                                                                     },
                                                                   },
+                                                                  "recursive": false,
                                                                   "value": [],
                                                                 },
                                                               },
@@ -3054,6 +3060,7 @@ exports[`Parser > Samples > Parses network.nix 1`] = `
                                                                 "line": 31,
                                                               },
                                                             },
+                                                            "recursive": false,
                                                             "value": [
                                                               {
                                                                 "comments": [],
@@ -3249,6 +3256,7 @@ exports[`Parser > Samples > Parses network.nix 1`] = `
                                                                                   "line": 32,
                                                                                 },
                                                                               },
+                                                                              "recursive": false,
                                                                               "value": [],
                                                                             },
                                                                           },
@@ -3307,6 +3315,7 @@ exports[`Parser > Samples > Parses network.nix 1`] = `
                                                                             "line": 32,
                                                                           },
                                                                         },
+                                                                        "recursive": false,
                                                                         "value": [
                                                                           {
                                                                             "comments": [],
@@ -4168,6 +4177,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                         "line": 1,
                       },
                     },
+                    "recursive": false,
                     "value": [],
                   },
                 },
@@ -4367,6 +4377,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                   "line": 5,
                 },
               },
+              "recursive": false,
               "value": [
                 {
                   "comments": [],
@@ -4560,6 +4571,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                             "line": 8,
                           },
                         },
+                        "recursive": false,
                         "value": [
                           {
                             "comments": [],
@@ -5070,6 +5082,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                             "line": 19,
                           },
                         },
+                        "recursive": false,
                         "value": [
                           {
                             "comments": [],
@@ -5216,6 +5229,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                       "line": 22,
                                     },
                                   },
+                                  "recursive": false,
                                   "value": [
                                     {
                                       "comments": [],
@@ -6064,6 +6078,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                             "line": 45,
                           },
                         },
+                        "recursive": false,
                         "value": [
                           {
                             "comments": [],
@@ -6212,6 +6227,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                       "line": 48,
                                     },
                                   },
+                                  "recursive": false,
                                   "value": [
                                     {
                                       "comments": [],
@@ -6442,6 +6458,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                       "line": 53,
                                     },
                                   },
+                                  "recursive": false,
                                   "value": [
                                     {
                                       "comments": [],
@@ -7057,6 +7074,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                       "line": 63,
                                     },
                                   },
+                                  "recursive": false,
                                   "value": [
                                     {
                                       "comments": [],
@@ -7210,6 +7228,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                       "line": 67,
                                     },
                                   },
+                                  "recursive": false,
                                   "value": [
                                     {
                                       "comments": [],
@@ -7435,6 +7454,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                 "line": 71,
                                               },
                                             },
+                                            "recursive": false,
                                             "value": [
                                               {
                                                 "comments": [],
@@ -7661,6 +7681,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                 "line": 76,
                                               },
                                             },
+                                            "recursive": false,
                                             "value": [
                                               {
                                                 "comments": [],
@@ -8072,6 +8093,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                                     "line": 81,
                                                                                   },
                                                                                 },
+                                                                                "recursive": false,
                                                                                 "value": [
                                                                                   {
                                                                                     "comments": [],
@@ -8367,6 +8389,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                   "line": 84,
                                                                 },
                                                               },
+                                                              "recursive": false,
                                                               "value": [],
                                                             },
                                                           },
@@ -9350,6 +9373,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                 "line": 95,
                                               },
                                             },
+                                            "recursive": false,
                                             "value": [
                                               {
                                                 "comments": [],
@@ -9496,6 +9520,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                           "line": 98,
                                                         },
                                                       },
+                                                      "recursive": false,
                                                       "value": [
                                                         {
                                                           "comments": [],
@@ -9567,6 +9592,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                     "line": 99,
                                                                   },
                                                                 },
+                                                                "recursive": false,
                                                                 "value": [
                                                                   {
                                                                     "comments": [],
@@ -9871,6 +9897,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                     "line": 104,
                                                                   },
                                                                 },
+                                                                "recursive": false,
                                                                 "value": [
                                                                   {
                                                                     "comments": [],
@@ -10175,6 +10202,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                     "line": 109,
                                                                   },
                                                                 },
+                                                                "recursive": false,
                                                                 "value": [
                                                                   {
                                                                     "comments": [],
@@ -10479,6 +10507,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                     "line": 114,
                                                                   },
                                                                 },
+                                                                "recursive": false,
                                                                 "value": [
                                                                   {
                                                                     "comments": [],
@@ -10778,6 +10807,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                               "line": 119,
                                                                             },
                                                                           },
+                                                                          "recursive": false,
                                                                           "value": [
                                                                             {
                                                                               "comments": [],
@@ -10953,6 +10983,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                     "line": 123,
                                                                   },
                                                                 },
+                                                                "recursive": false,
                                                                 "value": [
                                                                   {
                                                                     "comments": [],
@@ -11117,6 +11148,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                               "line": 127,
                                                                             },
                                                                           },
+                                                                          "recursive": false,
                                                                           "value": [
                                                                             {
                                                                               "comments": [],
@@ -11484,6 +11516,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                     "line": 133,
                                                                   },
                                                                 },
+                                                                "recursive": false,
                                                                 "value": [
                                                                   {
                                                                     "comments": [],
@@ -11633,6 +11666,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                               "line": 136,
                                                                             },
                                                                           },
+                                                                          "recursive": false,
                                                                           "value": [
                                                                             {
                                                                               "comments": [],
@@ -12010,6 +12044,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                 "line": 145,
                                               },
                                             },
+                                            "recursive": false,
                                             "value": [
                                               {
                                                 "comments": [],
@@ -12295,6 +12330,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                   "line": 149,
                                                                 },
                                                               },
+                                                              "recursive": false,
                                                               "value": [
                                                                 {
                                                                   "comments": [],
@@ -12468,6 +12504,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                           "line": 151,
                                                         },
                                                       },
+                                                      "recursive": false,
                                                       "value": [
                                                         {
                                                           "comments": [],
@@ -13185,6 +13222,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                     "line": 168,
                                                                   },
                                                                 },
+                                                                "recursive": false,
                                                                 "value": [
                                                                   {
                                                                     "comments": [],
@@ -13459,6 +13497,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                             "line": 174,
                                                                           },
                                                                         },
+                                                                        "recursive": false,
                                                                         "value": [
                                                                           {
                                                                             "comments": [],
@@ -13728,6 +13767,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                                               "line": 178,
                                                                                             },
                                                                                           },
+                                                                                          "recursive": false,
                                                                                           "value": [
                                                                                             {
                                                                                               "comments": [],
@@ -14086,6 +14126,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                                               "line": 184,
                                                                                             },
                                                                                           },
+                                                                                          "recursive": false,
                                                                                           "value": [
                                                                                             {
                                                                                               "comments": [],
@@ -14453,6 +14494,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                             "line": 192,
                                                                           },
                                                                         },
+                                                                        "recursive": false,
                                                                         "value": [
                                                                           {
                                                                             "comments": [],
@@ -14722,6 +14764,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                                               "line": 196,
                                                                                             },
                                                                                           },
+                                                                                          "recursive": false,
                                                                                           "value": [
                                                                                             {
                                                                                               "comments": [],
@@ -15089,6 +15132,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                             "line": 204,
                                                                           },
                                                                         },
+                                                                        "recursive": false,
                                                                         "value": [
                                                                           {
                                                                             "comments": [],
@@ -15358,6 +15402,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                                               "line": 208,
                                                                                             },
                                                                                           },
+                                                                                          "recursive": false,
                                                                                           "value": [
                                                                                             {
                                                                                               "comments": [],
@@ -15716,6 +15761,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                                               "line": 214,
                                                                                             },
                                                                                           },
+                                                                                          "recursive": false,
                                                                                           "value": [
                                                                                             {
                                                                                               "comments": [],
@@ -16074,6 +16120,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                                               "line": 220,
                                                                                             },
                                                                                           },
+                                                                                          "recursive": false,
                                                                                           "value": [
                                                                                             {
                                                                                               "comments": [],
@@ -16441,6 +16488,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                             "line": 228,
                                                                           },
                                                                         },
+                                                                        "recursive": false,
                                                                         "value": [
                                                                           {
                                                                             "comments": [],
@@ -16710,6 +16758,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                                               "line": 232,
                                                                                             },
                                                                                           },
+                                                                                          "recursive": false,
                                                                                           "value": [
                                                                                             {
                                                                                               "comments": [],
@@ -17068,6 +17117,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                                               "line": 238,
                                                                                             },
                                                                                           },
+                                                                                          "recursive": false,
                                                                                           "value": [
                                                                                             {
                                                                                               "comments": [],
@@ -17426,6 +17476,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                                               "line": 244,
                                                                                             },
                                                                                           },
+                                                                                          "recursive": false,
                                                                                           "value": [
                                                                                             {
                                                                                               "comments": [],
@@ -17842,6 +17893,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                       "line": 259,
                                     },
                                   },
+                                  "recursive": false,
                                   "value": [
                                     {
                                       "comments": [],
@@ -18149,6 +18201,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                       "line": 265,
                                     },
                                   },
+                                  "recursive": false,
                                   "value": [
                                     {
                                       "comments": [],
@@ -18605,6 +18658,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                 "line": 271,
                                               },
                                             },
+                                            "recursive": false,
                                             "value": [
                                               {
                                                 "comments": [],
@@ -18844,6 +18898,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                             "line": 278,
                           },
                         },
+                        "recursive": false,
                         "value": [
                           {
                             "comments": [],
@@ -18915,6 +18970,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                       "line": 279,
                                     },
                                   },
+                                  "recursive": false,
                                   "value": [
                                     {
                                       "comments": [],
@@ -19239,6 +19295,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                       "line": 286,
                                     },
                                   },
+                                  "recursive": false,
                                   "value": [
                                     {
                                       "comments": [],
@@ -19410,6 +19467,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                       "line": 290,
                                     },
                                   },
+                                  "recursive": false,
                                   "value": [
                                     {
                                       "comments": [],
@@ -19570,6 +19628,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                             "line": 295,
                           },
                         },
+                        "recursive": false,
                         "value": [
                           {
                             "comments": [],
@@ -19851,6 +19910,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                 "line": 301,
                                               },
                                             },
+                                            "recursive": false,
                                             "value": [
                                               {
                                                 "comments": [],
@@ -19922,6 +19982,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                           "line": 302,
                                                         },
                                                       },
+                                                      "recursive": false,
                                                       "value": [
                                                         {
                                                           "comments": [],
@@ -20370,6 +20431,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                             "line": 310,
                                           },
                                         },
+                                        "recursive": false,
                                         "value": [
                                           {
                                             "comments": [],
@@ -20457,6 +20519,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                       "line": 311,
                                                     },
                                                   },
+                                                  "recursive": false,
                                                   "value": [
                                                     {
                                                       "comments": [],
@@ -21440,6 +21503,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                     "line": 323,
                                                                   },
                                                                 },
+                                                                "recursive": false,
                                                                 "value": [
                                                                   {
                                                                     "comments": [
@@ -21866,6 +21930,7 @@ exports[`Parser > Samples > Parses quartz.nix 1`] = `
                                                                     "line": 331,
                                                                   },
                                                                 },
+                                                                "recursive": false,
                                                                 "value": [
                                                                   {
                                                                     "comments": [
@@ -23325,6 +23390,7 @@ exports[`Parser > Samples > Parses wallpapers.nix 1`] = `
                                                           "line": 8,
                                                         },
                                                       },
+                                                      "recursive": false,
                                                       "value": [
                                                         {
                                                           "comments": [],
@@ -23602,6 +23668,7 @@ exports[`Parser > Samples > Parses wallpapers.nix 1`] = `
                                                                     "line": 17,
                                                                   },
                                                                 },
+                                                                "recursive": false,
                                                                 "value": [
                                                                   {
                                                                     "comments": [],
@@ -24529,6 +24596,7 @@ exports[`Parser > Samples > Parses wallpapers.nix 1`] = `
                                                             "line": 31,
                                                           },
                                                         },
+                                                        "recursive": false,
                                                         "value": [
                                                           {
                                                             "comments": [],
@@ -25034,6 +25102,7 @@ exports[`Parser > Samples > Parses wallpapers.nix 1`] = `
                                     "line": 32,
                                   },
                                 },
+                                "recursive": false,
                                 "value": [],
                               },
                             },
@@ -25821,6 +25890,7 @@ exports[`Parser > Samples > Parses wallpapers.nix 1`] = `
                                 "line": 41,
                               },
                             },
+                            "recursive": false,
                             "value": [
                               {
                                 "comments": [],
@@ -26251,6 +26321,7 @@ exports[`Parser > Samples > Parses wallpapers.nix 1`] = `
                                             "line": 51,
                                           },
                                         },
+                                        "recursive": false,
                                         "value": [
                                           {
                                             "comments": [],
