@@ -6,6 +6,7 @@ import {
 	KeywordToken,
 	Lexer,
 	Location,
+	NullToken,
 	PathToken,
 	StringToken,
 	Token,
@@ -20,7 +21,10 @@ export enum NodeKind {
 	SubExpr = "SubExpr",
 	Modifier = "Modifier",
 	LetIn = "LetIn",
+	Import = "Import",
+	Fallback = "Fallback",
 	Identifier = "Identifier",
+	Null = "Null",
 	Int = "Int",
 	Float = "Float",
 	Bool = "Bool",
@@ -96,7 +100,8 @@ export interface BinaryExprNode extends BaseNode {
 		| ConcatNode
 		| OrNode
 		| AndNode
-		| PeriodNode;
+		| PeriodNode
+		| FallbackNode;
 	left: SubExprNode | BinaryExprNode;
 	right: SubExprNode | BinaryExprNode;
 }
@@ -136,10 +141,23 @@ export interface LetInNode extends BaseNode {
 	body: ExprNode;
 }
 
+export interface ImportNode extends BaseNode {
+	kind: NodeKind.Import;
+	value: ExprNode;
+}
+
+export interface FallbackNode extends BaseNode {
+	kind: NodeKind.Fallback;
+}
+
 export interface IdentifierNode extends BaseNode {
 	kind: NodeKind.Identifier;
 	value: Array<string | StringNode | InterpNode>;
 	comments?: Array<CommentNode>;
+}
+
+export interface NullNode extends BaseNode {
+	kind: NodeKind.Null;
 }
 
 export interface IntNode extends BaseNode {
@@ -330,7 +348,9 @@ export type ValueNode =
 	| FnCallNode
 	| PathNode
 	| IdentifierNode
-	| LetInNode;
+	| LetInNode
+	| ImportNode
+	| NullNode;
 
 export type AstNode =
 	| RootNode
@@ -372,7 +392,10 @@ export type AstNode =
 	| OrNode
 	| AndNode
 	| PeriodNode
-	| InterpNode;
+	| InterpNode
+	| ImportNode
+	| NullNode
+	| FallbackNode;
 
 enum ParserState {
 	Default = "Default",
@@ -581,6 +604,54 @@ export class Parser {
 				}
 			});
 
+			if (op !== undefined && op.kind === TokenKind.Keyword && op.value === "or") {
+				this.skipNewLines();
+
+				this.consume();
+
+				const right = this.parseSubExpr(true, inFunctionCall, inList);
+
+				if (root.kind === NodeKind.SubExpr) {
+					const node: BinaryExprNode = {
+						kind: NodeKind.BinaryExpr,
+						op: {
+							kind: NodeKind.Fallback,
+							loc: op.loc,
+						},
+						left: root,
+						right,
+						loc: {
+							start: root.loc.start,
+							end: right.loc.end,
+						},
+					};
+
+					last = node;
+					root = node;
+				} else {
+					const node: BinaryExprNode = {
+						kind: NodeKind.BinaryExpr,
+						op: {
+							kind: NodeKind.Fallback,
+							loc: op.loc,
+						},
+						left: last!.right,
+						right,
+						loc: {
+							start: last!.right.loc.start,
+							end: right.loc.end,
+						},
+					};
+
+					last!.right = node;
+					last = node;
+				}
+
+				currentPrecedence = 1;
+
+				continue;
+			}
+
 			if (op !== undefined && this.isOperator(op)) {
 				this.skipNewLines();
 
@@ -611,7 +682,7 @@ export class Parser {
 						left: last!.right,
 						right,
 						loc: {
-							start: root.loc.start,
+							start: last!.right.loc.start,
 							end: right.loc.end,
 						},
 					};
@@ -761,6 +832,11 @@ export class Parser {
 				end = value.loc;
 				break;
 			}
+			case TokenKind.Null: {
+				value = this.parseNull();
+				end = value.loc;
+				break;
+			}
 			default:
 				console.log(this.tokens.slice(this.cursor - 10, this.cursor));
 				console.log("-----");
@@ -770,7 +846,14 @@ export class Parser {
 
 		const args: Array<ExprNode> = [];
 
-		if (!inFunctionCall && !inList && (value.kind === NodeKind.Expr || value.kind === NodeKind.Identifier)) {
+		if (
+			// Function args must be their own expression to be parsed as a function call.
+			!inFunctionCall &&
+			// You can't call a function in a list because the list delimiter is whitespace.
+			!inList &&
+			// Only certain nodes can be called as functions.
+			(value.kind === NodeKind.Expr || value.kind === NodeKind.Identifier || value.kind === NodeKind.Import)
+		) {
 			while (this.cursor < this.tokens.length) {
 				const next = this.lookahead(() => {
 					while (this.cursor < this.tokens.length) {
@@ -794,6 +877,7 @@ export class Parser {
 					next.kind === TokenKind.CloseCurly ||
 					next.kind === TokenKind.CloseBracket ||
 					next.kind === TokenKind.CloseParen ||
+					next.kind === TokenKind.Keyword ||
 					this.isOperator(next)
 				) {
 					break;
@@ -1366,7 +1450,7 @@ export class Parser {
 		};
 	}
 
-	parseKeyword(): LetInNode {
+	parseKeyword(): LetInNode | ImportNode {
 		const token = this.peek() as KeywordToken;
 
 		switch (token.value) {
@@ -1408,9 +1492,32 @@ export class Parser {
 					},
 				};
 			}
+			case "import": {
+				this.consume();
+
+				const expr = this.parseExpr();
+
+				return {
+					kind: NodeKind.Import,
+					value: expr,
+					loc: {
+						start: token.loc.start,
+						end: expr.loc.end,
+					},
+				};
+			}
 			default:
 				throw new Error(`Unexpected keyword: ${token.value}`);
 		}
+	}
+
+	parseNull(): NullNode {
+		const token = this.consume() as NullToken;
+
+		return {
+			kind: NodeKind.Null,
+			loc: token.loc,
+		};
 	}
 }
 

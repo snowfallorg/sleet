@@ -127,6 +127,8 @@ const pretty = (node: AstNode): string => {
 			}
 			throw new Error(`Unknown FnParams type: ${node}`);
 		}
+		case NodeKind.Import:
+			return `(import ${pretty(node.value)})`;
 		case NodeKind.FnParam:
 			return `${pretty(node.name)}${node.default ? ` ? ${pretty(node.default)}` : ""}`;
 		case NodeKind.Path:
@@ -152,6 +154,8 @@ const pretty = (node: AstNode): string => {
 			return "||";
 		case NodeKind.Update:
 			return "//";
+		case NodeKind.Fallback:
+			return "or";
 		default:
 			console.log(node);
 			throw new Error(`Unknown node to prettify: "${node.kind}"`);
@@ -294,6 +298,28 @@ describe("Parser", () => {
 		});
 	});
 
+	describe("Fallbacks", () => {
+		it("should parse fallbacks", () => {
+			const ast = parser.parse(`x.y or 4`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot('"(x.y or 4)"');
+		});
+	});
+
+	describe("Imports", () => {
+		it("should parse imports", () => {
+			const ast = parser.parse(`import ./x/y/z`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot('"(import ./x/y/z)"');
+		});
+
+		it("should parse import function calls", () => {
+			const ast = parser.parse(`import ./x/y/z {}`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot('"((import ./x/y/z) {})"');
+		});
+	});
+
 	describe("Lists", () => {
 		it("should parse lists", () => {
 			const ast = parser.parse(`[#one\na\n#two\nb]`);
@@ -338,6 +364,16 @@ describe("Parser", () => {
 
 		it("Parses wallpapers.nix", () => {
 			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "wallpapers.nix"), {
+				encoding: "utf8",
+			});
+
+			const ast = parser.parse(code);
+
+			expect(ast).toMatchSnapshot();
+		});
+
+		it("Parses network.nix", () => {
+			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "network.nix"), {
 				encoding: "utf8",
 			});
 

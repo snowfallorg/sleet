@@ -546,5 +546,15 @@ describe("Lexer", () => {
 
 			expect(tokens).toMatchSnapshot();
 		});
+
+		it("Lexes network.nix", () => {
+			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "network.nix"), {
+				encoding: "utf8",
+			});
+
+			const tokens = lexer.lex(code);
+
+			expect(tokens).toMatchSnapshot();
+		});
 	});
 });

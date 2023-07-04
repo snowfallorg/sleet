@@ -1,5 +1,3131 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Lexer > Samples > Lexes network.nix 1`] = `
+[
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 1,
+        "line": 1,
+      },
+      "start": {
+        "col": 0,
+        "line": 1,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 5,
+        "line": 1,
+      },
+      "start": {
+        "col": 2,
+        "line": 1,
+      },
+    },
+    "value": "lib",
+  },
+  {
+    "kind": "Comma",
+    "loc": {
+      "end": {
+        "col": 6,
+        "line": 1,
+      },
+      "start": {
+        "col": 5,
+        "line": 1,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 13,
+        "line": 1,
+      },
+      "start": {
+        "col": 7,
+        "line": 1,
+      },
+    },
+    "value": "inputs",
+  },
+  {
+    "kind": "Comma",
+    "loc": {
+      "end": {
+        "col": 14,
+        "line": 1,
+      },
+      "start": {
+        "col": 13,
+        "line": 1,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 30,
+        "line": 1,
+      },
+      "start": {
+        "col": 15,
+        "line": 1,
+      },
+    },
+    "value": "snowfall-inputs",
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 32,
+        "line": 1,
+      },
+      "start": {
+        "col": 31,
+        "line": 1,
+      },
+    },
+  },
+  {
+    "kind": "Colon",
+    "loc": {
+      "end": {
+        "col": 33,
+        "line": 1,
+      },
+      "start": {
+        "col": 32,
+        "line": 1,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 2,
+      },
+      "start": {
+        "col": 33,
+        "line": 1,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 3,
+      },
+      "start": {
+        "col": 0,
+        "line": 2,
+      },
+    },
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 3,
+        "line": 3,
+      },
+      "start": {
+        "col": 0,
+        "line": 3,
+      },
+    },
+    "value": "let",
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 4,
+      },
+      "start": {
+        "col": 3,
+        "line": 3,
+      },
+    },
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 9,
+        "line": 4,
+      },
+      "start": {
+        "col": 2,
+        "line": 4,
+      },
+    },
+    "value": "inherit",
+  },
+  {
+    "kind": "OpenParen",
+    "loc": {
+      "end": {
+        "col": 11,
+        "line": 4,
+      },
+      "start": {
+        "col": 10,
+        "line": 4,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 17,
+        "line": 4,
+      },
+      "start": {
+        "col": 11,
+        "line": 4,
+      },
+    },
+    "value": "inputs",
+  },
+  {
+    "kind": "Period",
+    "loc": {
+      "end": {
+        "col": 18,
+        "line": 4,
+      },
+      "start": {
+        "col": 17,
+        "line": 4,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 25,
+        "line": 4,
+      },
+      "start": {
+        "col": 18,
+        "line": 4,
+      },
+    },
+    "value": "nixpkgs",
+  },
+  {
+    "kind": "Period",
+    "loc": {
+      "end": {
+        "col": 26,
+        "line": 4,
+      },
+      "start": {
+        "col": 25,
+        "line": 4,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 29,
+        "line": 4,
+      },
+      "start": {
+        "col": 26,
+        "line": 4,
+      },
+    },
+    "value": "lib",
+  },
+  {
+    "kind": "CloseParen",
+    "loc": {
+      "end": {
+        "col": 30,
+        "line": 4,
+      },
+      "start": {
+        "col": 29,
+        "line": 4,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 40,
+        "line": 4,
+      },
+      "start": {
+        "col": 31,
+        "line": 4,
+      },
+    },
+    "value": "assertMsg",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 45,
+        "line": 4,
+      },
+      "start": {
+        "col": 41,
+        "line": 4,
+      },
+    },
+    "value": "last",
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 46,
+        "line": 4,
+      },
+      "start": {
+        "col": 45,
+        "line": 4,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 5,
+      },
+      "start": {
+        "col": 46,
+        "line": 4,
+      },
+    },
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 2,
+        "line": 5,
+      },
+      "start": {
+        "col": 0,
+        "line": 5,
+      },
+    },
+    "value": "in",
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 6,
+      },
+      "start": {
+        "col": 2,
+        "line": 5,
+      },
+    },
+  },
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 1,
+        "line": 6,
+      },
+      "start": {
+        "col": 0,
+        "line": 6,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 7,
+      },
+      "start": {
+        "col": 1,
+        "line": 6,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 9,
+        "line": 7,
+      },
+      "start": {
+        "col": 2,
+        "line": 7,
+      },
+    },
+    "value": "network",
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 11,
+        "line": 7,
+      },
+      "start": {
+        "col": 10,
+        "line": 7,
+      },
+    },
+  },
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 13,
+        "line": 7,
+      },
+      "start": {
+        "col": 12,
+        "line": 7,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 8,
+      },
+      "start": {
+        "col": 13,
+        "line": 7,
+      },
+    },
+  },
+  {
+    "kind": "Comment",
+    "loc": {
+      "end": {
+        "col": 63,
+        "line": 8,
+      },
+      "start": {
+        "col": 4,
+        "line": 8,
+      },
+    },
+    "value": " Split an address to get its host name or ip and its port.",
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 9,
+      },
+      "start": {
+        "col": 63,
+        "line": 8,
+      },
+    },
+  },
+  {
+    "kind": "Comment",
+    "loc": {
+      "end": {
+        "col": 27,
+        "line": 9,
+      },
+      "start": {
+        "col": 4,
+        "line": 9,
+      },
+    },
+    "value": " Type: String -> Attrs",
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 10,
+      },
+      "start": {
+        "col": 27,
+        "line": 9,
+      },
+    },
+  },
+  {
+    "kind": "Comment",
+    "loc": {
+      "end": {
+        "col": 45,
+        "line": 10,
+      },
+      "start": {
+        "col": 4,
+        "line": 10,
+      },
+    },
+    "value": " Usage: get-address-parts \\"bismuth:3000\\"",
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 11,
+      },
+      "start": {
+        "col": 45,
+        "line": 10,
+      },
+    },
+  },
+  {
+    "kind": "Comment",
+    "loc": {
+      "end": {
+        "col": 52,
+        "line": 11,
+      },
+      "start": {
+        "col": 4,
+        "line": 11,
+      },
+    },
+    "value": "   result: { host = \\"bismuth\\"; port = \\"3000\\"; }",
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 12,
+      },
+      "start": {
+        "col": 52,
+        "line": 11,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 21,
+        "line": 12,
+      },
+      "start": {
+        "col": 4,
+        "line": 12,
+      },
+    },
+    "value": "get-address-parts",
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 23,
+        "line": 12,
+      },
+      "start": {
+        "col": 22,
+        "line": 12,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 31,
+        "line": 12,
+      },
+      "start": {
+        "col": 24,
+        "line": 12,
+      },
+    },
+    "value": "address",
+  },
+  {
+    "kind": "Colon",
+    "loc": {
+      "end": {
+        "col": 32,
+        "line": 12,
+      },
+      "start": {
+        "col": 31,
+        "line": 12,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 13,
+      },
+      "start": {
+        "col": 32,
+        "line": 12,
+      },
+    },
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 9,
+        "line": 13,
+      },
+      "start": {
+        "col": 6,
+        "line": 13,
+      },
+    },
+    "value": "let",
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 14,
+      },
+      "start": {
+        "col": 9,
+        "line": 13,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 21,
+        "line": 14,
+      },
+      "start": {
+        "col": 8,
+        "line": 14,
+      },
+    },
+    "value": "address-parts",
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 23,
+        "line": 14,
+      },
+      "start": {
+        "col": 22,
+        "line": 14,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 32,
+        "line": 14,
+      },
+      "start": {
+        "col": 24,
+        "line": 14,
+      },
+    },
+    "value": "builtins",
+  },
+  {
+    "kind": "Period",
+    "loc": {
+      "end": {
+        "col": 33,
+        "line": 14,
+      },
+      "start": {
+        "col": 32,
+        "line": 14,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 38,
+        "line": 14,
+      },
+      "start": {
+        "col": 33,
+        "line": 14,
+      },
+    },
+    "value": "split",
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 42,
+        "line": 14,
+      },
+      "start": {
+        "col": 39,
+        "line": 14,
+      },
+    },
+    "multiline": false,
+    "value": [
+      ":",
+    ],
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 50,
+        "line": 14,
+      },
+      "start": {
+        "col": 43,
+        "line": 14,
+      },
+    },
+    "value": "address",
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 51,
+        "line": 14,
+      },
+      "start": {
+        "col": 50,
+        "line": 14,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 15,
+      },
+      "start": {
+        "col": 51,
+        "line": 14,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 10,
+        "line": 15,
+      },
+      "start": {
+        "col": 8,
+        "line": 15,
+      },
+    },
+    "value": "ip",
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 12,
+        "line": 15,
+      },
+      "start": {
+        "col": 11,
+        "line": 15,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 21,
+        "line": 15,
+      },
+      "start": {
+        "col": 13,
+        "line": 15,
+      },
+    },
+    "value": "builtins",
+  },
+  {
+    "kind": "Period",
+    "loc": {
+      "end": {
+        "col": 22,
+        "line": 15,
+      },
+      "start": {
+        "col": 21,
+        "line": 15,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 26,
+        "line": 15,
+      },
+      "start": {
+        "col": 22,
+        "line": 15,
+      },
+    },
+    "value": "head",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 40,
+        "line": 15,
+      },
+      "start": {
+        "col": 27,
+        "line": 15,
+      },
+    },
+    "value": "address-parts",
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 41,
+        "line": 15,
+      },
+      "start": {
+        "col": 40,
+        "line": 15,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 16,
+      },
+      "start": {
+        "col": 41,
+        "line": 15,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 12,
+        "line": 16,
+      },
+      "start": {
+        "col": 8,
+        "line": 16,
+      },
+    },
+    "value": "host",
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 14,
+        "line": 16,
+      },
+      "start": {
+        "col": 13,
+        "line": 16,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 17,
+        "line": 16,
+      },
+      "start": {
+        "col": 15,
+        "line": 16,
+      },
+    },
+    "value": "if",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 20,
+        "line": 16,
+      },
+      "start": {
+        "col": 18,
+        "line": 16,
+      },
+    },
+    "value": "ip",
+  },
+  {
+    "kind": "EqEq",
+    "loc": {
+      "end": {
+        "col": 23,
+        "line": 16,
+      },
+      "start": {
+        "col": 21,
+        "line": 16,
+      },
+    },
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 26,
+        "line": 16,
+      },
+      "start": {
+        "col": 24,
+        "line": 16,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "",
+    ],
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 31,
+        "line": 16,
+      },
+      "start": {
+        "col": 27,
+        "line": 16,
+      },
+    },
+    "value": "then",
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 43,
+        "line": 16,
+      },
+      "start": {
+        "col": 32,
+        "line": 16,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "127.0.0.1",
+    ],
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 48,
+        "line": 16,
+      },
+      "start": {
+        "col": 44,
+        "line": 16,
+      },
+    },
+    "value": "else",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 51,
+        "line": 16,
+      },
+      "start": {
+        "col": 49,
+        "line": 16,
+      },
+    },
+    "value": "ip",
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 52,
+        "line": 16,
+      },
+      "start": {
+        "col": 51,
+        "line": 16,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 17,
+      },
+      "start": {
+        "col": 52,
+        "line": 16,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 12,
+        "line": 17,
+      },
+      "start": {
+        "col": 8,
+        "line": 17,
+      },
+    },
+    "value": "port",
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 14,
+        "line": 17,
+      },
+      "start": {
+        "col": 13,
+        "line": 17,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 17,
+        "line": 17,
+      },
+      "start": {
+        "col": 15,
+        "line": 17,
+      },
+    },
+    "value": "if",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 26,
+        "line": 17,
+      },
+      "start": {
+        "col": 18,
+        "line": 17,
+      },
+    },
+    "value": "builtins",
+  },
+  {
+    "kind": "Period",
+    "loc": {
+      "end": {
+        "col": 27,
+        "line": 17,
+      },
+      "start": {
+        "col": 26,
+        "line": 17,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 33,
+        "line": 17,
+      },
+      "start": {
+        "col": 27,
+        "line": 17,
+      },
+    },
+    "value": "length",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 47,
+        "line": 17,
+      },
+      "start": {
+        "col": 34,
+        "line": 17,
+      },
+    },
+    "value": "address-parts",
+  },
+  {
+    "kind": "NotEq",
+    "loc": {
+      "end": {
+        "col": 50,
+        "line": 17,
+      },
+      "start": {
+        "col": 48,
+        "line": 17,
+      },
+    },
+  },
+  {
+    "kind": "Int",
+    "loc": {
+      "end": {
+        "col": 52,
+        "line": 17,
+      },
+      "start": {
+        "col": 51,
+        "line": 17,
+      },
+    },
+    "value": 3,
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 57,
+        "line": 17,
+      },
+      "start": {
+        "col": 53,
+        "line": 17,
+      },
+    },
+    "value": "then",
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 60,
+        "line": 17,
+      },
+      "start": {
+        "col": 58,
+        "line": 17,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "",
+    ],
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 65,
+        "line": 17,
+      },
+      "start": {
+        "col": 61,
+        "line": 17,
+      },
+    },
+    "value": "else",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 70,
+        "line": 17,
+      },
+      "start": {
+        "col": 66,
+        "line": 17,
+      },
+    },
+    "value": "last",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 84,
+        "line": 17,
+      },
+      "start": {
+        "col": 71,
+        "line": 17,
+      },
+    },
+    "value": "address-parts",
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 85,
+        "line": 17,
+      },
+      "start": {
+        "col": 84,
+        "line": 17,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 18,
+      },
+      "start": {
+        "col": 85,
+        "line": 17,
+      },
+    },
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 8,
+        "line": 18,
+      },
+      "start": {
+        "col": 6,
+        "line": 18,
+      },
+    },
+    "value": "in",
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 19,
+      },
+      "start": {
+        "col": 8,
+        "line": 18,
+      },
+    },
+  },
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 7,
+        "line": 19,
+      },
+      "start": {
+        "col": 6,
+        "line": 19,
+      },
+    },
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 15,
+        "line": 19,
+      },
+      "start": {
+        "col": 8,
+        "line": 19,
+      },
+    },
+    "value": "inherit",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 20,
+        "line": 19,
+      },
+      "start": {
+        "col": 16,
+        "line": 19,
+      },
+    },
+    "value": "host",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 25,
+        "line": 19,
+      },
+      "start": {
+        "col": 21,
+        "line": 19,
+      },
+    },
+    "value": "port",
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 26,
+        "line": 19,
+      },
+      "start": {
+        "col": 25,
+        "line": 19,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 28,
+        "line": 19,
+      },
+      "start": {
+        "col": 27,
+        "line": 19,
+      },
+    },
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 29,
+        "line": 19,
+      },
+      "start": {
+        "col": 28,
+        "line": 19,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 20,
+      },
+      "start": {
+        "col": 29,
+        "line": 19,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 21,
+      },
+      "start": {
+        "col": 0,
+        "line": 20,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 16,
+        "line": 21,
+      },
+      "start": {
+        "col": 4,
+        "line": 21,
+      },
+    },
+    "value": "create-proxy",
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 18,
+        "line": 21,
+      },
+      "start": {
+        "col": 17,
+        "line": 21,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 22,
+      },
+      "start": {
+        "col": 18,
+        "line": 21,
+      },
+    },
+  },
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 7,
+        "line": 22,
+      },
+      "start": {
+        "col": 6,
+        "line": 22,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 12,
+        "line": 22,
+      },
+      "start": {
+        "col": 8,
+        "line": 22,
+      },
+    },
+    "value": "port",
+  },
+  {
+    "kind": "Has",
+    "loc": {
+      "end": {
+        "col": 14,
+        "line": 22,
+      },
+      "start": {
+        "col": 13,
+        "line": 22,
+      },
+    },
+  },
+  {
+    "kind": "Null",
+    "loc": {
+      "end": {
+        "col": 19,
+        "line": 22,
+      },
+      "start": {
+        "col": 15,
+        "line": 22,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 23,
+      },
+      "start": {
+        "col": 19,
+        "line": 22,
+      },
+    },
+  },
+  {
+    "kind": "Comma",
+    "loc": {
+      "end": {
+        "col": 7,
+        "line": 23,
+      },
+      "start": {
+        "col": 6,
+        "line": 23,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 12,
+        "line": 23,
+      },
+      "start": {
+        "col": 8,
+        "line": 23,
+      },
+    },
+    "value": "host",
+  },
+  {
+    "kind": "Has",
+    "loc": {
+      "end": {
+        "col": 14,
+        "line": 23,
+      },
+      "start": {
+        "col": 13,
+        "line": 23,
+      },
+    },
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 26,
+        "line": 23,
+      },
+      "start": {
+        "col": 15,
+        "line": 23,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "127.0.0.1",
+    ],
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 24,
+      },
+      "start": {
+        "col": 26,
+        "line": 23,
+      },
+    },
+  },
+  {
+    "kind": "Comma",
+    "loc": {
+      "end": {
+        "col": 7,
+        "line": 24,
+      },
+      "start": {
+        "col": 6,
+        "line": 24,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 25,
+        "line": 24,
+      },
+      "start": {
+        "col": 8,
+        "line": 24,
+      },
+    },
+    "value": "proxy-web-sockets",
+  },
+  {
+    "kind": "Has",
+    "loc": {
+      "end": {
+        "col": 27,
+        "line": 24,
+      },
+      "start": {
+        "col": 26,
+        "line": 24,
+      },
+    },
+  },
+  {
+    "kind": "Bool",
+    "loc": {
+      "end": {
+        "col": 33,
+        "line": 24,
+      },
+      "start": {
+        "col": 28,
+        "line": 24,
+      },
+    },
+    "value": false,
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 25,
+      },
+      "start": {
+        "col": 33,
+        "line": 24,
+      },
+    },
+  },
+  {
+    "kind": "Comma",
+    "loc": {
+      "end": {
+        "col": 7,
+        "line": 25,
+      },
+      "start": {
+        "col": 6,
+        "line": 25,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 20,
+        "line": 25,
+      },
+      "start": {
+        "col": 8,
+        "line": 25,
+      },
+    },
+    "value": "extra-config",
+  },
+  {
+    "kind": "Has",
+    "loc": {
+      "end": {
+        "col": 22,
+        "line": 25,
+      },
+      "start": {
+        "col": 21,
+        "line": 25,
+      },
+    },
+  },
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 24,
+        "line": 25,
+      },
+      "start": {
+        "col": 23,
+        "line": 25,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 26,
+        "line": 25,
+      },
+      "start": {
+        "col": 25,
+        "line": 25,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 26,
+      },
+      "start": {
+        "col": 26,
+        "line": 25,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 7,
+        "line": 26,
+      },
+      "start": {
+        "col": 6,
+        "line": 26,
+      },
+    },
+  },
+  {
+    "kind": "Colon",
+    "loc": {
+      "end": {
+        "col": 8,
+        "line": 26,
+      },
+      "start": {
+        "col": 7,
+        "line": 26,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 27,
+      },
+      "start": {
+        "col": 8,
+        "line": 26,
+      },
+    },
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 14,
+        "line": 27,
+      },
+      "start": {
+        "col": 8,
+        "line": 27,
+      },
+    },
+    "value": "assert",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 24,
+        "line": 27,
+      },
+      "start": {
+        "col": 15,
+        "line": 27,
+      },
+    },
+    "value": "assertMsg",
+  },
+  {
+    "kind": "OpenParen",
+    "loc": {
+      "end": {
+        "col": 26,
+        "line": 27,
+      },
+      "start": {
+        "col": 25,
+        "line": 27,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 30,
+        "line": 27,
+      },
+      "start": {
+        "col": 26,
+        "line": 27,
+      },
+    },
+    "value": "port",
+  },
+  {
+    "kind": "NotEq",
+    "loc": {
+      "end": {
+        "col": 33,
+        "line": 27,
+      },
+      "start": {
+        "col": 31,
+        "line": 27,
+      },
+    },
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 36,
+        "line": 27,
+      },
+      "start": {
+        "col": 34,
+        "line": 27,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "",
+    ],
+  },
+  {
+    "kind": "And",
+    "loc": {
+      "end": {
+        "col": 39,
+        "line": 27,
+      },
+      "start": {
+        "col": 37,
+        "line": 27,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 44,
+        "line": 27,
+      },
+      "start": {
+        "col": 40,
+        "line": 27,
+      },
+    },
+    "value": "port",
+  },
+  {
+    "kind": "NotEq",
+    "loc": {
+      "end": {
+        "col": 47,
+        "line": 27,
+      },
+      "start": {
+        "col": 45,
+        "line": 27,
+      },
+    },
+  },
+  {
+    "kind": "Null",
+    "loc": {
+      "end": {
+        "col": 52,
+        "line": 27,
+      },
+      "start": {
+        "col": 48,
+        "line": 27,
+      },
+    },
+  },
+  {
+    "kind": "CloseParen",
+    "loc": {
+      "end": {
+        "col": 53,
+        "line": 27,
+      },
+      "start": {
+        "col": 52,
+        "line": 27,
+      },
+    },
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 76,
+        "line": 27,
+      },
+      "start": {
+        "col": 54,
+        "line": 27,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "port cannot be empty",
+    ],
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 77,
+        "line": 27,
+      },
+      "start": {
+        "col": 76,
+        "line": 27,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 28,
+      },
+      "start": {
+        "col": 77,
+        "line": 27,
+      },
+    },
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 14,
+        "line": 28,
+      },
+      "start": {
+        "col": 8,
+        "line": 28,
+      },
+    },
+    "value": "assert",
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 24,
+        "line": 28,
+      },
+      "start": {
+        "col": 15,
+        "line": 28,
+      },
+    },
+    "value": "assertMsg",
+  },
+  {
+    "kind": "OpenParen",
+    "loc": {
+      "end": {
+        "col": 26,
+        "line": 28,
+      },
+      "start": {
+        "col": 25,
+        "line": 28,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 30,
+        "line": 28,
+      },
+      "start": {
+        "col": 26,
+        "line": 28,
+      },
+    },
+    "value": "host",
+  },
+  {
+    "kind": "NotEq",
+    "loc": {
+      "end": {
+        "col": 33,
+        "line": 28,
+      },
+      "start": {
+        "col": 31,
+        "line": 28,
+      },
+    },
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 36,
+        "line": 28,
+      },
+      "start": {
+        "col": 34,
+        "line": 28,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "",
+    ],
+  },
+  {
+    "kind": "CloseParen",
+    "loc": {
+      "end": {
+        "col": 37,
+        "line": 28,
+      },
+      "start": {
+        "col": 36,
+        "line": 28,
+      },
+    },
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 60,
+        "line": 28,
+      },
+      "start": {
+        "col": 38,
+        "line": 28,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "host cannot be empty",
+    ],
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 61,
+        "line": 28,
+      },
+      "start": {
+        "col": 60,
+        "line": 28,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 29,
+      },
+      "start": {
+        "col": 61,
+        "line": 28,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 20,
+        "line": 29,
+      },
+      "start": {
+        "col": 8,
+        "line": 29,
+      },
+    },
+    "value": "extra-config",
+  },
+  {
+    "kind": "Update",
+    "loc": {
+      "end": {
+        "col": 23,
+        "line": 29,
+      },
+      "start": {
+        "col": 21,
+        "line": 29,
+      },
+    },
+  },
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 25,
+        "line": 29,
+      },
+      "start": {
+        "col": 24,
+        "line": 29,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 30,
+      },
+      "start": {
+        "col": 25,
+        "line": 29,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 19,
+        "line": 30,
+      },
+      "start": {
+        "col": 10,
+        "line": 30,
+      },
+    },
+    "value": "locations",
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 21,
+        "line": 30,
+      },
+      "start": {
+        "col": 20,
+        "line": 30,
+      },
+    },
+  },
+  {
+    "kind": "OpenParen",
+    "loc": {
+      "end": {
+        "col": 23,
+        "line": 30,
+      },
+      "start": {
+        "col": 22,
+        "line": 30,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 35,
+        "line": 30,
+      },
+      "start": {
+        "col": 23,
+        "line": 30,
+      },
+    },
+    "value": "extra-config",
+  },
+  {
+    "kind": "Period",
+    "loc": {
+      "end": {
+        "col": 36,
+        "line": 30,
+      },
+      "start": {
+        "col": 35,
+        "line": 30,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 45,
+        "line": 30,
+      },
+      "start": {
+        "col": 36,
+        "line": 30,
+      },
+    },
+    "value": "locations",
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 48,
+        "line": 30,
+      },
+      "start": {
+        "col": 46,
+        "line": 30,
+      },
+    },
+    "value": "or",
+  },
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 50,
+        "line": 30,
+      },
+      "start": {
+        "col": 49,
+        "line": 30,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 52,
+        "line": 30,
+      },
+      "start": {
+        "col": 51,
+        "line": 30,
+      },
+    },
+  },
+  {
+    "kind": "CloseParen",
+    "loc": {
+      "end": {
+        "col": 53,
+        "line": 30,
+      },
+      "start": {
+        "col": 52,
+        "line": 30,
+      },
+    },
+  },
+  {
+    "kind": "Update",
+    "loc": {
+      "end": {
+        "col": 56,
+        "line": 30,
+      },
+      "start": {
+        "col": 54,
+        "line": 30,
+      },
+    },
+  },
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 58,
+        "line": 30,
+      },
+      "start": {
+        "col": 57,
+        "line": 30,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 31,
+      },
+      "start": {
+        "col": 58,
+        "line": 30,
+      },
+    },
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 15,
+        "line": 31,
+      },
+      "start": {
+        "col": 12,
+        "line": 31,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "/",
+    ],
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 17,
+        "line": 31,
+      },
+      "start": {
+        "col": 16,
+        "line": 31,
+      },
+    },
+  },
+  {
+    "kind": "OpenParen",
+    "loc": {
+      "end": {
+        "col": 19,
+        "line": 31,
+      },
+      "start": {
+        "col": 18,
+        "line": 31,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 31,
+        "line": 31,
+      },
+      "start": {
+        "col": 19,
+        "line": 31,
+      },
+    },
+    "value": "extra-config",
+  },
+  {
+    "kind": "Period",
+    "loc": {
+      "end": {
+        "col": 32,
+        "line": 31,
+      },
+      "start": {
+        "col": 31,
+        "line": 31,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 41,
+        "line": 31,
+      },
+      "start": {
+        "col": 32,
+        "line": 31,
+      },
+    },
+    "value": "locations",
+  },
+  {
+    "kind": "Period",
+    "loc": {
+      "end": {
+        "col": 42,
+        "line": 31,
+      },
+      "start": {
+        "col": 41,
+        "line": 31,
+      },
+    },
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 45,
+        "line": 31,
+      },
+      "start": {
+        "col": 42,
+        "line": 31,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "/",
+    ],
+  },
+  {
+    "kind": "Keyword",
+    "loc": {
+      "end": {
+        "col": 48,
+        "line": 31,
+      },
+      "start": {
+        "col": 46,
+        "line": 31,
+      },
+    },
+    "value": "or",
+  },
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 50,
+        "line": 31,
+      },
+      "start": {
+        "col": 49,
+        "line": 31,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 52,
+        "line": 31,
+      },
+      "start": {
+        "col": 51,
+        "line": 31,
+      },
+    },
+  },
+  {
+    "kind": "CloseParen",
+    "loc": {
+      "end": {
+        "col": 53,
+        "line": 31,
+      },
+      "start": {
+        "col": 52,
+        "line": 31,
+      },
+    },
+  },
+  {
+    "kind": "Update",
+    "loc": {
+      "end": {
+        "col": 56,
+        "line": 31,
+      },
+      "start": {
+        "col": 54,
+        "line": 31,
+      },
+    },
+  },
+  {
+    "kind": "OpenCurly",
+    "loc": {
+      "end": {
+        "col": 58,
+        "line": 31,
+      },
+      "start": {
+        "col": 57,
+        "line": 31,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 32,
+      },
+      "start": {
+        "col": 58,
+        "line": 31,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 23,
+        "line": 32,
+      },
+      "start": {
+        "col": 14,
+        "line": 32,
+      },
+    },
+    "value": "proxyPass",
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 25,
+        "line": 32,
+      },
+      "start": {
+        "col": 24,
+        "line": 32,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 33,
+      },
+      "start": {
+        "col": 25,
+        "line": 32,
+      },
+    },
+  },
+  {
+    "kind": "String",
+    "loc": {
+      "end": {
+        "col": 92,
+        "line": 33,
+      },
+      "start": {
+        "col": 16,
+        "line": 33,
+      },
+    },
+    "multiline": false,
+    "value": [
+      "http://",
+      {
+        "kind": "Interp",
+        "loc": {
+          "end": {
+            "col": 31,
+            "line": 33,
+          },
+          "start": {
+            "col": 24,
+            "line": 33,
+          },
+        },
+        "value": [
+          {
+            "kind": "Identifier",
+            "loc": {
+              "end": {
+                "col": 30,
+                "line": 33,
+              },
+              "start": {
+                "col": 26,
+                "line": 33,
+              },
+            },
+            "value": "host",
+          },
+        ],
+      },
+      "",
+      {
+        "kind": "Interp",
+        "loc": {
+          "end": {
+            "col": 91,
+            "line": 33,
+          },
+          "start": {
+            "col": 31,
+            "line": 33,
+          },
+        },
+        "value": [
+          {
+            "kind": "Identifier",
+            "loc": {
+              "end": {
+                "col": 35,
+                "line": 33,
+              },
+              "start": {
+                "col": 33,
+                "line": 33,
+              },
+            },
+            "value": "if",
+          },
+          {
+            "kind": "Identifier",
+            "loc": {
+              "end": {
+                "col": 40,
+                "line": 33,
+              },
+              "start": {
+                "col": 36,
+                "line": 33,
+              },
+            },
+            "value": "port",
+          },
+          {
+            "kind": "NotEq",
+            "loc": {
+              "end": {
+                "col": 43,
+                "line": 33,
+              },
+              "start": {
+                "col": 41,
+                "line": 33,
+              },
+            },
+          },
+          {
+            "kind": "Null",
+            "loc": {
+              "end": {
+                "col": 48,
+                "line": 33,
+              },
+              "start": {
+                "col": 44,
+                "line": 33,
+              },
+            },
+          },
+          {
+            "kind": "Identifier",
+            "loc": {
+              "end": {
+                "col": 53,
+                "line": 33,
+              },
+              "start": {
+                "col": 49,
+                "line": 33,
+              },
+            },
+            "value": "then",
+          },
+          {
+            "kind": "String",
+            "loc": {
+              "end": {
+                "col": 82,
+                "line": 33,
+              },
+              "start": {
+                "col": 54,
+                "line": 33,
+              },
+            },
+            "multiline": false,
+            "value": [
+              ":",
+              {
+                "kind": "Interp",
+                "loc": {
+                  "end": {
+                    "col": 81,
+                    "line": 33,
+                  },
+                  "start": {
+                    "col": 56,
+                    "line": 33,
+                  },
+                },
+                "value": [
+                  {
+                    "kind": "Identifier",
+                    "loc": {
+                      "end": {
+                        "col": 66,
+                        "line": 33,
+                      },
+                      "start": {
+                        "col": 58,
+                        "line": 33,
+                      },
+                    },
+                    "value": "builtins",
+                  },
+                  {
+                    "kind": "Period",
+                    "loc": {
+                      "end": {
+                        "col": 67,
+                        "line": 33,
+                      },
+                      "start": {
+                        "col": 66,
+                        "line": 33,
+                      },
+                    },
+                  },
+                  {
+                    "kind": "Identifier",
+                    "loc": {
+                      "end": {
+                        "col": 75,
+                        "line": 33,
+                      },
+                      "start": {
+                        "col": 67,
+                        "line": 33,
+                      },
+                    },
+                    "value": "toString",
+                  },
+                  {
+                    "kind": "Identifier",
+                    "loc": {
+                      "end": {
+                        "col": 80,
+                        "line": 33,
+                      },
+                      "start": {
+                        "col": 76,
+                        "line": 33,
+                      },
+                    },
+                    "value": "port",
+                  },
+                ],
+              },
+              "",
+            ],
+          },
+          {
+            "kind": "Identifier",
+            "loc": {
+              "end": {
+                "col": 87,
+                "line": 33,
+              },
+              "start": {
+                "col": 83,
+                "line": 33,
+              },
+            },
+            "value": "else",
+          },
+          {
+            "kind": "String",
+            "loc": {
+              "end": {
+                "col": 90,
+                "line": 33,
+              },
+              "start": {
+                "col": 88,
+                "line": 33,
+              },
+            },
+            "multiline": false,
+            "value": [
+              "",
+            ],
+          },
+        ],
+      },
+      "",
+    ],
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 93,
+        "line": 33,
+      },
+      "start": {
+        "col": 92,
+        "line": 33,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 34,
+      },
+      "start": {
+        "col": 93,
+        "line": 33,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 35,
+      },
+      "start": {
+        "col": 0,
+        "line": 34,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 29,
+        "line": 35,
+      },
+      "start": {
+        "col": 14,
+        "line": 35,
+      },
+    },
+    "value": "proxyWebsockets",
+  },
+  {
+    "kind": "Eq",
+    "loc": {
+      "end": {
+        "col": 31,
+        "line": 35,
+      },
+      "start": {
+        "col": 30,
+        "line": 35,
+      },
+    },
+  },
+  {
+    "kind": "Identifier",
+    "loc": {
+      "end": {
+        "col": 49,
+        "line": 35,
+      },
+      "start": {
+        "col": 32,
+        "line": 35,
+      },
+    },
+    "value": "proxy-web-sockets",
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 50,
+        "line": 35,
+      },
+      "start": {
+        "col": 49,
+        "line": 35,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 36,
+      },
+      "start": {
+        "col": 50,
+        "line": 35,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 13,
+        "line": 36,
+      },
+      "start": {
+        "col": 12,
+        "line": 36,
+      },
+    },
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 14,
+        "line": 36,
+      },
+      "start": {
+        "col": 13,
+        "line": 36,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 37,
+      },
+      "start": {
+        "col": 14,
+        "line": 36,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 11,
+        "line": 37,
+      },
+      "start": {
+        "col": 10,
+        "line": 37,
+      },
+    },
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 12,
+        "line": 37,
+      },
+      "start": {
+        "col": 11,
+        "line": 37,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 38,
+      },
+      "start": {
+        "col": 12,
+        "line": 37,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 9,
+        "line": 38,
+      },
+      "start": {
+        "col": 8,
+        "line": 38,
+      },
+    },
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 10,
+        "line": 38,
+      },
+      "start": {
+        "col": 9,
+        "line": 38,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 39,
+      },
+      "start": {
+        "col": 10,
+        "line": 38,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 3,
+        "line": 39,
+      },
+      "start": {
+        "col": 2,
+        "line": 39,
+      },
+    },
+  },
+  {
+    "kind": "Semi",
+    "loc": {
+      "end": {
+        "col": 4,
+        "line": 39,
+      },
+      "start": {
+        "col": 3,
+        "line": 39,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 40,
+      },
+      "start": {
+        "col": 4,
+        "line": 39,
+      },
+    },
+  },
+  {
+    "kind": "CloseCurly",
+    "loc": {
+      "end": {
+        "col": 1,
+        "line": 40,
+      },
+      "start": {
+        "col": 0,
+        "line": 40,
+      },
+    },
+  },
+  {
+    "kind": "NewLine",
+    "loc": {
+      "end": {
+        "col": 0,
+        "line": 41,
+      },
+      "start": {
+        "col": 1,
+        "line": 40,
+      },
+    },
+  },
+  {
+    "kind": "Eof",
+    "loc": {
+      "end": {
+        "col": 1,
+        "line": 41,
+      },
+      "start": {
+        "col": 1,
+        "line": 41,
+      },
+    },
+  },
+]
+`;
+
 exports[`Lexer > Samples > Lexes quartz.nix 1`] = `
 [
   {
