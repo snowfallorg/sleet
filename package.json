@@ -1,0 +1,33 @@
+{
+	"name": "sleet",
+	"version": "0.0.0",
+	"description": "A parser for Nix.",
+	"main": "dist/sleet.js",
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"build": "vite build",
+		"build:types": "tsc ./src/index.ts --declaration --emitDeclarationOnly --outDir ./dist",
+		"test": "vitest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/snowfallorg/sleet.git"
+	},
+	"keywords": [
+		"nix",
+		"parser"
+	],
+	"author": "Jake Hamilton <jake.hamilton@hey.com>",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/snowfallorg/sleet/issues"
+	},
+	"homepage": "https://github.com/snowfallorg/sleet#readme",
+	"devDependencies": {
+		"@types/node": "^20.3.3",
+		"rimraf": "^5.0.1",
+		"typescript": "^5.1.6",
+		"vite": "^4.3.9",
+		"vitest": "^0.32.2"
+	}
+}
