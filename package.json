@@ -2,7 +2,7 @@
 	"name": "@snowfallorg/sleet",
 	"version": "0.0.0",
 	"description": "A parser for Nix.",
-	"main": "dist/sleet.js",
+	"main": "dist/sleet.cjs.js",
 	"scripts": {
 		"clean": "rimraf ./dist",
 		"build": "vite build",
@@ -23,6 +23,11 @@
 		"url": "https://github.com/snowfallorg/sleet/issues"
 	},
 	"homepage": "https://github.com/snowfallorg/sleet#readme",
+	"exports": {
+		"import": "./dist/sleet.es.js",
+		"require": "./dist/sleet.cjs.js",
+		"node": "./dist/sleet.cjs.js"
+	},
 	"devDependencies": {
 		"@types/node": "^20.3.3",
 		"rimraf": "^5.0.1",
