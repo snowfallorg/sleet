@@ -528,6 +528,24 @@ describe("Parser", () => {
 				}"
 			`);
 		});
+
+		it("should parse unary exprs followed by binary exprs", () => {
+			const ast = parser.parse(`!false && true`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot('"((!false) && true)"');
+		});
+
+		it("should parse unary exprs with fn call followed by binary exprs", () => {
+			const ast = parser.parse(`!elem 1 [ 1 2 3 ] && true`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot(`
+				"((!(elem 1 [
+					1
+					2
+					3
+				])) && true)"
+			`);
+		});
 	});
 
 	describe("Samples", () => {

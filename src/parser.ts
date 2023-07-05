@@ -604,7 +604,7 @@ export class Parser {
 		};
 	}
 
-	parseExpr(inFunctionCall = false, inList = false): ExprNode {
+	parseExpr(inFunctionCall = false, inList = false, inUnaryExpr = false): ExprNode {
 		let currentPrecedence = 0;
 
 		let root: SubExprNode | BinaryExprNode | UnaryExprNode = this.parseSubExpr(true, inFunctionCall, inList);
@@ -627,6 +627,10 @@ export class Parser {
 					return token;
 				}
 			});
+
+			if (op !== undefined && inUnaryExpr) {
+				break;
+			}
 
 			if (op !== undefined && op.kind === TokenKind.Keyword && op.value === "or") {
 				this.skipNewLines();
@@ -863,7 +867,7 @@ export class Parser {
 			}
 			case TokenKind.Not: {
 				// This is a unique case due to it being a unary operator.
-				return this.parseNot();
+				return this.parseNot(inFunctionCall);
 			}
 			default:
 				console.log(this.tokens.slice(this.cursor - 10, this.cursor));
@@ -952,10 +956,10 @@ export class Parser {
 		};
 	}
 
-	parseNot(): UnaryExprNode {
+	parseNot(inFunctionCall = false): UnaryExprNode {
 		const token = this.consume() as NotToken;
 
-		const expr = this.parseExpr();
+		const expr = this.parseExpr(inFunctionCall, false, true);
 
 		return {
 			kind: NodeKind.UnaryExpr,
