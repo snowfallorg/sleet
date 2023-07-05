@@ -1009,7 +1009,7 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     ],
   },
   {
-    "kind": "Identifier",
+    "kind": "Keyword",
     "loc": {
       "end": {
         "col": 49,
@@ -1217,7 +1217,7 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
     ],
   },
   {
-    "kind": "Identifier",
+    "kind": "Keyword",
     "loc": {
       "end": {
         "col": 66,
@@ -2814,7 +2814,7 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
             ],
           },
           {
-            "kind": "Identifier",
+            "kind": "Keyword",
             "loc": {
               "end": {
                 "col": 88,

@@ -327,6 +327,43 @@ describe("Parser", () => {
 
 			expect(pretty(ast)).toMatchInlineSnapshot('"((builtins.length x) != 3)"');
 		});
+
+		it("should parse function calls with nested exprs", () => {
+			const ast = parser.parse(`
+				foldl
+					(result: item:
+						result // (mapAttrs
+							(name: value:
+								if isDerivation value then
+									value
+								else if builtins.isAttrs value then
+									value
+								else
+									value)
+							item)
+					)
+					{ }
+					items;
+			`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot(`
+				"(foldl (result:
+					(item:
+						(result // (mapAttrs (name:
+							(value:
+								if (isDerivation value) then
+									value
+								else
+									if (builtins.isAttrs value) then
+										value
+									else
+										value
+							)
+						) item))
+					)
+				) {} items)"
+			`);
+		});
 	});
 
 	describe("Let In", () => {
@@ -432,6 +469,16 @@ describe("Parser", () => {
 
 		it("Parses audio.nix", () => {
 			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "audio.nix"), {
+				encoding: "utf8",
+			});
+
+			const ast = parser.parse(code);
+
+			expect(ast).toMatchSnapshot();
+		});
+
+		it("Parses attrs.nix", () => {
+			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "attrs.nix"), {
 				encoding: "utf8",
 			});
 

@@ -1377,9 +1377,13 @@ export class Parser {
 					throw new Error(`Expected comma or closed curly brace, but got: "${next.kind}"`);
 				}
 
+				this.skipNewLines();
+
 				if (next.kind === TokenKind.Comma) {
 					this.consume();
 				}
+
+				this.skipNewLines();
 			}
 
 			const closeCurly = this.consume();
@@ -1563,15 +1567,25 @@ export class Parser {
 			case "if": {
 				this.consume();
 
+				this.skipNewLines();
+
 				const condition = this.parseExpr();
+
+				this.skipNewLines();
 
 				// Skip then
 				this.consume();
 
+				this.skipNewLines();
+
 				const thenBody = this.parseExpr();
+
+				this.skipNewLines();
 
 				// Skip else
 				this.consume();
+
+				this.skipNewLines();
 
 				const elseBody = this.parseExpr();
 
