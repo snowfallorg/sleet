@@ -176,6 +176,16 @@ const pretty = (node: AstNode): string => {
 			return "?";
 		case NodeKind.Null:
 			return "null";
+		case NodeKind.Gt:
+			return ">";
+		case NodeKind.Gte:
+			return ">=";
+		case NodeKind.Lt:
+			return "<";
+		case NodeKind.Lte:
+			return "<=";
+		case NodeKind.Concat:
+			return "++";
 		default:
 			console.log(node);
 			throw new Error(`Unknown node to prettify: "${node.kind}"`);
@@ -364,6 +374,49 @@ describe("Parser", () => {
 				) {} items)"
 			`);
 		});
+
+		it("should parse complex function calls", () => {
+			const ast = parser.parse(`
+          args@{ config
+          , pkgs
+          , system ? pkgs.system
+          , target ? system
+          , format ? "home"
+          , host ? ""
+          , virtual ? (snowfall-lib.system.is-virtual target)
+          , systems ? { }
+          , ...
+          }:
+          {
+            _file = "virtual:snowfallorg/home/extra-special-args";
+
+            config = {
+              home-manager.extraSpecialArgs = {
+                inherit system target format virtual systems host;
+
+                lib = home-lib;
+
+                inputs = snowfall-lib.flake.without-src user-inputs;
+              };
+            };
+          };
+			`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot(`
+				"(args @ { config, pkgs, system ? pkgs.system, target ? system, format ? \\"home\\", host ? \\"\\", virtual ? (snowfall-lib.system.is-virtual target), systems ? {}, ... }:
+					{
+						_file = \\"virtual:snowfallorg/home/extra-special-args\\";
+						config = {
+							home-manager.extraSpecialArgs = {
+								inherit system target format virtual systems host;
+								lib = home-lib;
+								inputs = (snowfall-lib.flake.without-src user-inputs);
+							};
+						};
+					}
+				)"
+			`);
+		});
 	});
 
 	describe("Let In", () => {
@@ -479,6 +532,16 @@ describe("Parser", () => {
 
 		it("Parses attrs.nix", () => {
 			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "attrs.nix"), {
+				encoding: "utf8",
+			});
+
+			const ast = parser.parse(code);
+
+			expect(ast).toMatchSnapshot();
+		});
+
+		it.only("Parses home.nix", () => {
+			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "home.nix"), {
 				encoding: "utf8",
 			});
 

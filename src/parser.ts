@@ -1329,6 +1329,9 @@ export class Parser {
 
 			while (this.cursor < this.tokens.length) {
 				const token = this.peek();
+
+				this.skipNewLines();
+
 				if (token.kind === TokenKind.CloseCurly) {
 					break;
 				}
@@ -1336,6 +1339,7 @@ export class Parser {
 				if (token.kind === TokenKind.Ellipsis) {
 					this.consume();
 					args.extra = true;
+					this.skipNewLines();
 					break;
 				}
 
