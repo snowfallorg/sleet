@@ -37,6 +37,8 @@ const pretty = (node: AstNode): string => {
 			return `#${node.value}`;
 		case NodeKind.BinaryExpr:
 			return `(${pretty(node.left)} ${pretty(node.op)} ${pretty(node.right)})`;
+		case NodeKind.UnaryExpr:
+			return `(${pretty(node.op)}${pretty(node.value)})`;
 		case NodeKind.Conditional:
 			return `if ${pretty(node.condition)} then\n${pretty(node.then)
 				.split("\n")
@@ -186,6 +188,8 @@ const pretty = (node: AstNode): string => {
 			return "<=";
 		case NodeKind.Concat:
 			return "++";
+		case NodeKind.Not:
+			return "!";
 		default:
 			console.log(node);
 			throw new Error(`Unknown node to prettify: "${node.kind}"`);
@@ -489,6 +493,43 @@ describe("Parser", () => {
 		});
 	});
 
+	describe("Unary Expr", () => {
+		it("should parse unary exprs", () => {
+			const ast = parser.parse(`
+				{
+					snowfall-top-level-lib = filterAttrs (name: value: !builtins.isAttrs value) snowfall-lib;
+
+					base-lib = merge-shallow [
+						core-inputs.nixpkgs.lib
+						core-inputs-libs
+						user-inputs-libs
+						snowfall-top-level-lib
+						{ snowfall = snowfall-lib; }
+					];
+				}
+			`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot(`
+				"{
+					snowfall-top-level-lib = (filterAttrs (name:
+						(value:
+							(!(builtins.isAttrs value))
+						)
+					) snowfall-lib);
+					base-lib = (merge-shallow [
+						core-inputs.nixpkgs.lib
+						core-inputs-libs
+						user-inputs-libs
+						snowfall-top-level-lib
+						{
+							snowfall = snowfall-lib;
+						}
+					]);
+				}"
+			`);
+		});
+	});
+
 	describe("Samples", () => {
 		it("Parses quartz.nix", () => {
 			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "quartz.nix"), {
@@ -540,8 +581,18 @@ describe("Parser", () => {
 			expect(ast).toMatchSnapshot();
 		});
 
-		it.only("Parses home.nix", () => {
+		it("Parses home.nix", () => {
 			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "home.nix"), {
+				encoding: "utf8",
+			});
+
+			const ast = parser.parse(code);
+
+			expect(ast).toMatchSnapshot();
+		});
+
+		it("Parses snowfall-lib.nix", () => {
+			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "snowfall-lib.nix"), {
 				encoding: "utf8",
 			});
 

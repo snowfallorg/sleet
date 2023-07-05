@@ -6,6 +6,7 @@ import {
 	KeywordToken,
 	Lexer,
 	Location,
+	NotToken,
 	NullToken,
 	PathToken,
 	StringToken,
@@ -17,6 +18,7 @@ export enum NodeKind {
 	Root = "Root",
 	Comment = "Comment",
 	Expr = "Expr",
+	UnaryExpr = "UnaryExpr",
 	BinaryExpr = "BinaryExpr",
 	SubExpr = "SubExpr",
 	Conditional = "Conditional",
@@ -77,7 +79,7 @@ export interface CommentNode extends BaseNode {
 
 export interface ExprNode extends BaseNode {
 	kind: NodeKind.Expr;
-	value: SubExprNode | BinaryExprNode;
+	value: SubExprNode | BinaryExprNode | UnaryExprNode;
 }
 
 export interface BinaryExprNode extends BaseNode {
@@ -87,7 +89,6 @@ export interface BinaryExprNode extends BaseNode {
 		| EqNode
 		| EqEqNode
 		| NotEqNode
-		| NotNode
 		| LtNode
 		| LteNode
 		| GtNode
@@ -103,8 +104,14 @@ export interface BinaryExprNode extends BaseNode {
 		| AndNode
 		| PeriodNode
 		| FallbackNode;
-	left: SubExprNode | BinaryExprNode;
-	right: SubExprNode | BinaryExprNode;
+	left: SubExprNode | BinaryExprNode | UnaryExprNode;
+	right: SubExprNode | BinaryExprNode | UnaryExprNode;
+}
+
+export interface UnaryExprNode extends BaseNode {
+	kind: NodeKind.UnaryExpr;
+	op: NotNode;
+	value: ExprNode;
 }
 
 export interface SubExprNode extends BaseNode {
@@ -375,6 +382,7 @@ export type AstNode =
 	| FnParamNode
 	| FnCallNode
 	| BinaryExprNode
+	| UnaryExprNode
 	| SubExprNode
 	| IntNode
 	| FloatNode
@@ -599,7 +607,7 @@ export class Parser {
 	parseExpr(inFunctionCall = false, inList = false): ExprNode {
 		let currentPrecedence = 0;
 
-		let root: SubExprNode | BinaryExprNode = this.parseSubExpr(true, inFunctionCall, inList);
+		let root: SubExprNode | BinaryExprNode | UnaryExprNode = this.parseSubExpr(true, inFunctionCall, inList);
 		let last: BinaryExprNode;
 
 		while (this.cursor < this.tokens.length) {
@@ -627,7 +635,7 @@ export class Parser {
 
 				const right = this.parseSubExpr(true, inFunctionCall, inList);
 
-				if (root.kind === NodeKind.SubExpr) {
+				if (root.kind !== NodeKind.BinaryExpr) {
 					const node: BinaryExprNode = {
 						kind: NodeKind.BinaryExpr,
 						op: {
@@ -725,7 +733,7 @@ export class Parser {
 		};
 	}
 
-	parseSubExpr(postExpressionComments = true, inFunctionCall = false, inList = false): SubExprNode {
+	parseSubExpr(postExpressionComments = true, inFunctionCall = false, inList = false): SubExprNode | UnaryExprNode {
 		const modifiers: SubExprNode["modifiers"] = [];
 
 		const comments: SubExprNode["comments"] = {
@@ -853,6 +861,10 @@ export class Parser {
 				end = value.loc;
 				break;
 			}
+			case TokenKind.Not: {
+				// This is a unique case due to it being a unary operator.
+				return this.parseNot();
+			}
 			default:
 				console.log(this.tokens.slice(this.cursor - 10, this.cursor));
 				console.log("-----");
@@ -936,6 +948,25 @@ export class Parser {
 			loc: {
 				start: start.start,
 				end: end.end,
+			},
+		};
+	}
+
+	parseNot(): UnaryExprNode {
+		const token = this.consume() as NotToken;
+
+		const expr = this.parseExpr();
+
+		return {
+			kind: NodeKind.UnaryExpr,
+			op: {
+				kind: NodeKind.Not,
+				loc: token.loc,
+			},
+			value: expr,
+			loc: {
+				start: token.loc.start,
+				end: expr.loc.end,
 			},
 		};
 	}
