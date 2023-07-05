@@ -172,6 +172,8 @@ const pretty = (node: AstNode): string => {
 			return "==";
 		case NodeKind.NotEq:
 			return "!=";
+		case NodeKind.Has:
+			return "?";
 		case NodeKind.Null:
 			return "null";
 		default:
@@ -266,7 +268,11 @@ describe("Parser", () => {
 	it("should parse recursive attrs", () => {
 		const ast = parser.parse(`rec { x = true; }`);
 
-		console.log(pretty(ast));
+		expect(pretty(ast)).toMatchInlineSnapshot(`
+			"rec {
+				x = true;
+			}"
+		`);
 	});
 
 	describe("Functions", () => {
@@ -416,6 +422,16 @@ describe("Parser", () => {
 
 		it("Parses network.nix", () => {
 			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "network.nix"), {
+				encoding: "utf8",
+			});
+
+			const ast = parser.parse(code);
+
+			expect(ast).toMatchSnapshot();
+		});
+
+		it("Parses audio.nix", () => {
+			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "audio.nix"), {
 				encoding: "utf8",
 			});
 

@@ -457,7 +457,8 @@ export class Parser {
 			token.kind === TokenKind.Concat ||
 			token.kind === TokenKind.Or ||
 			token.kind === TokenKind.And ||
-			token.kind === TokenKind.Period
+			token.kind === TokenKind.Period ||
+			token.kind === TokenKind.Has
 		);
 	}
 
