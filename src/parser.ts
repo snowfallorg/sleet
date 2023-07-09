@@ -267,6 +267,7 @@ export type FnParamsNode = BaseNode & {
 export interface FnParamNode extends BaseNode {
 	kind: NodeKind.FnParam;
 	name: IdentifierNode;
+	comments: Array<CommentNode>;
 	default?: ExprNode;
 }
 
@@ -1423,6 +1424,8 @@ export class Parser {
 					break;
 				}
 
+				const comments = this.parseComments();
+
 				const identifier = this.parseIdentifier();
 
 				let defaultValue: FnParamNode["default"] = undefined;
@@ -1432,10 +1435,13 @@ export class Parser {
 					defaultValue = this.parseExpr();
 				}
 
+				this.parseComments();
+
 				args.value.push({
 					kind: NodeKind.FnParam,
 					name: identifier,
 					default: defaultValue,
+					comments,
 					loc: {
 						start: identifier.loc.start,
 						end: defaultValue !== undefined ? defaultValue.loc.end : identifier.loc.end,

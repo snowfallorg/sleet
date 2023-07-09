@@ -521,6 +521,19 @@ describe("Lexer", () => {
 			expect(tokens.length).toBe(2);
 			expectKind(tokens[0], TokenKind.Comment, {
 				value: " asdf",
+				multiline: false,
+			});
+			expectKind(tokens[1], TokenKind.Eof);
+		});
+
+		it("should lex multiline comments", () => {
+			const tokens = lexer.lex(`/* asdf */`);
+
+			console.log(tokens);
+			expect(tokens.length).toBe(2);
+			expectKind(tokens[0], TokenKind.Comment, {
+				value: " asdf ",
+				multiline: true,
 			});
 			expectKind(tokens[1], TokenKind.Eof);
 		});

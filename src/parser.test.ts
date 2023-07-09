@@ -731,5 +731,15 @@ describe("Parser", () => {
 
 			expect(ast).toMatchSnapshot();
 		});
+
+		it("Parses types2.nix", () => {
+			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "types2.nix"), {
+				encoding: "utf8",
+			});
+
+			const ast = parser.parse(code);
+
+			expect(ast).toMatchSnapshot();
+		});
 	});
 });

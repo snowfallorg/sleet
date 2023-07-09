@@ -174,6 +174,7 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "line": 4,
       },
     },
+    "multiline": false,
     "value": " Example comment here...",
   },
   {
@@ -469,6 +470,7 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "line": 9,
       },
     },
+    "multiline": false,
     "value": " Split an address to get its host name or ip and its port.",
   },
   {
@@ -496,6 +498,7 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "line": 10,
       },
     },
+    "multiline": false,
     "value": " Type: String -> Attrs",
   },
   {
@@ -523,6 +526,7 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "line": 11,
       },
     },
+    "multiline": false,
     "value": " Usage: get-address-parts \\"bismuth:3000\\"",
   },
   {
@@ -550,6 +554,7 @@ exports[`Lexer > Samples > Lexes network.nix 1`] = `
         "line": 12,
       },
     },
+    "multiline": false,
     "value": "   result: { host = \\"bismuth\\"; port = \\"3000\\"; }",
   },
   {
@@ -5025,6 +5030,7 @@ exports[`Lexer > Samples > Lexes quartz.nix 1`] = `
         "line": 33,
       },
     },
+    "multiline": false,
     "value": " Navidrome",
   },
   {
@@ -5092,6 +5098,7 @@ exports[`Lexer > Samples > Lexes quartz.nix 1`] = `
         "line": 36,
       },
     },
+    "multiline": false,
     "value": " Jellyfin",
   },
   {
@@ -5292,6 +5299,7 @@ exports[`Lexer > Samples > Lexes quartz.nix 1`] = `
         "line": 40,
       },
     },
+    "multiline": false,
     "value": " Jellyfin",
   },
   {
@@ -10016,6 +10024,7 @@ exports[`Lexer > Samples > Lexes quartz.nix 1`] = `
         "line": 126,
       },
     },
+    "multiline": false,
     "value": " For configuration options, see: man 5 smb.conf",
   },
   {
@@ -17257,6 +17266,7 @@ exports[`Lexer > Samples > Lexes quartz.nix 1`] = `
         "line": 255,
       },
     },
+    "multiline": false,
     "value": " settings-path = \\"/var/lib/homer/config.yml\\";",
   },
   {
@@ -21479,6 +21489,7 @@ exports[`Lexer > Samples > Lexes quartz.nix 1`] = `
         "line": 324,
       },
     },
+    "multiline": false,
     "value": " https://jellyfin.org/docs/general/networking/index.html#static-ports",
   },
   {
@@ -21586,6 +21597,7 @@ exports[`Lexer > Samples > Lexes quartz.nix 1`] = `
         "line": 327,
       },
     },
+    "multiline": false,
     "value": " This is required to support sync play.",
   },
   {
@@ -21882,6 +21894,7 @@ exports[`Lexer > Samples > Lexes quartz.nix 1`] = `
         "line": 332,
       },
     },
+    "multiline": false,
     "value": " https://www.navidrome.org/docs/usage/configuration-options/#available-options",
   },
   {
@@ -24211,6 +24224,7 @@ exports[`Lexer > Samples > Lexes wallpapers.nix 1`] = `
         "line": 25,
       },
     },
+    "multiline": false,
     "value": " fileName = builtins.baseNameOf image;",
   },
   {
@@ -24238,6 +24252,7 @@ exports[`Lexer > Samples > Lexes wallpapers.nix 1`] = `
         "line": 26,
       },
     },
+    "multiline": false,
     "value": " lib.getFileName is a helper to get the basename of",
   },
   {
@@ -24265,6 +24280,7 @@ exports[`Lexer > Samples > Lexes wallpapers.nix 1`] = `
         "line": 27,
       },
     },
+    "multiline": false,
     "value": " the file and then take the name before the file extension.",
   },
   {
@@ -24292,6 +24308,7 @@ exports[`Lexer > Samples > Lexes wallpapers.nix 1`] = `
         "line": 28,
       },
     },
+    "multiline": false,
     "value": " eg. mywallpaper.png -> mywallpaper",
   },
   {

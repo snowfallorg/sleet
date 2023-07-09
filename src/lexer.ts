@@ -62,6 +62,7 @@ export interface EofToken extends BaseToken {
 export interface CommentToken extends BaseToken {
 	kind: TokenKind.Comment;
 	value: string;
+	multiline: boolean;
 }
 
 export interface NullToken extends BaseToken {
@@ -376,6 +377,14 @@ export class Lexer {
 			return this.lexPeriod();
 		}
 
+		if (char === "#") {
+			return this.lexComment();
+		}
+
+		if (char === "/" && this.peek(1) == "*") {
+			return this.lexMultilineComment();
+		}
+
 		if (char === undefined) {
 			return this.lexEofToken();
 		}
@@ -443,10 +452,6 @@ export class Lexer {
 
 		if (char === '"' || (char === "'" && this.peek(1) === "'")) {
 			return this.lexString();
-		}
-
-		if (char === "#") {
-			return this.lexComment();
 		}
 
 		// We don't know what kind of token this is. Instead, stop lexing
@@ -943,6 +948,16 @@ export class Lexer {
 					kind: TokenKind.And,
 					loc,
 				};
+			case "<=":
+				return {
+					kind: TokenKind.Lte,
+					loc,
+				};
+			case ">=":
+				return {
+					kind: TokenKind.Gte,
+					loc,
+				};
 		}
 
 		console.log(this.code.substring(start - 10, end + 10));
@@ -1066,6 +1081,35 @@ export class Lexer {
 		return {
 			kind: TokenKind.Comment,
 			value: comment,
+			multiline: false,
+			loc: {
+				start: { line: startLine, col: startCol },
+				end: { line: endLine, col: endCol },
+			},
+		};
+	}
+
+	lexMultilineComment(): CommentToken {
+		const { line: startLine, col: startCol } = this;
+
+		let comment = "";
+
+		this.consume();
+		this.consume();
+
+		while (this.cursor < this.code.length && !(this.peek() === "*" && this.peek(1) === "/")) {
+			comment += this.consume();
+		}
+
+		this.consume();
+		this.consume();
+
+		const { line: endLine, col: endCol } = this;
+
+		return {
+			kind: TokenKind.Comment,
+			value: comment,
+			multiline: true,
 			loc: {
 				start: { line: startLine, col: startCol },
 				end: { line: endLine, col: endCol },
