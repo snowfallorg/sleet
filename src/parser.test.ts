@@ -190,6 +190,8 @@ const pretty = (node: AstNode): string => {
 			return "++";
 		case NodeKind.Not:
 			return "!";
+		case NodeKind.Period:
+			return "PERIOD";
 		default:
 			console.log(node);
 			throw new Error(`Unknown node to prettify: "${node.kind}"`);
@@ -548,6 +550,107 @@ describe("Parser", () => {
 		});
 	});
 
+	describe("Attrs", () => {
+		it("parses rec attrs", () => {
+			const ast = parser.parse(`
+{
+  gvariant = mkOptionType rec {
+  };
+}
+		`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot(`
+			"{
+				gvariant = (mkOptionType rec {});
+			}"
+		`);
+		});
+
+		it("parses expr access", () => {
+			const ast = parser.parse(`({ inherit f; }).f`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot(`
+				"{
+					inherit f;
+				}.f"
+			`);
+		});
+
+		it("parses complex attrs", () => {
+			const ast = parser.parse(`
+{
+  gvariant = mkOptionType rec {
+    merge = loc: defs:
+      let
+        vdefs = map (d:
+          d // {
+            value =
+              if gvar.isGVariant d.value then d.value else gvar.mkValue d.value;
+          }) defs;
+        vals = map (d: d.value) vdefs;
+        defTypes = map (x: x.type) vals;
+        sameOrNull = x: y: if x == y then y else null;
+        # A bit naive to just check the first entry…
+        sharedDefType = foldl' sameOrNull (head defTypes) defTypes;
+        allChecked = all (x: check x) vals;
+      in if gvar.isArray sharedDefType && allChecked then
+        gvar.mkValue ((types.listOf gvariant).merge loc (map vdefs)) // {
+            type = sharedDefType;
+          }
+      else
+        mergeDefaultOption loc defs;
+};
+}
+		`);
+
+			expect(pretty(ast)).toMatchInlineSnapshot(`
+				"{
+					gvariant = (mkOptionType rec {
+						merge = (loc:
+							(defs:
+								let
+									vdefs = (map (d:
+										(d // {
+											value = if (gvar.isGVariant d.value) then
+												d.value
+											else
+												(gvar.mkValue d.value);
+										})
+									) defs);
+									vals = (map (d:
+										d.value
+									) vdefs);
+									defTypes = (map (x:
+										x.type
+									) vals);
+									sameOrNull = (x:
+										(y:
+											if (x == y) then
+												y
+											else
+												null
+										)
+									);
+									# A bit naive to just check the first entry…
+									sharedDefType = (foldl' sameOrNull (head defTypes) defTypes);
+									allChecked = (all (x:
+										(check x)
+									) vals);
+								in
+									if ((gvar.isArray sharedDefType) && allChecked) then
+										((gvar.mkValue ((types.listOf gvariant).merge loc (map vdefs))) // {
+											type = sharedDefType;
+										})
+									else
+										(mergeDefaultOption loc defs)
+							)
+						);
+					});
+				}"
+			`);
+		});
+	});
+
 	describe("Samples", () => {
 		it("Parses quartz.nix", () => {
 			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "quartz.nix"), {
@@ -611,6 +714,16 @@ describe("Parser", () => {
 
 		it("Parses snowfall-lib.nix", () => {
 			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "snowfall-lib.nix"), {
+				encoding: "utf8",
+			});
+
+			const ast = parser.parse(code);
+
+			expect(ast).toMatchSnapshot();
+		});
+
+		it("Parses types.nix", () => {
+			const code = fs.readFileSync(path.resolve(__dirname, "__test__", "samples", "types.nix"), {
 				encoding: "utf8",
 			});
 

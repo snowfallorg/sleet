@@ -167,7 +167,7 @@ export interface FallbackNode extends BaseNode {
 
 export interface IdentifierNode extends BaseNode {
 	kind: NodeKind.Identifier;
-	value: Array<string | StringNode | InterpNode>;
+	value: Array<string | StringNode | InterpNode | ExprNode>;
 	comments?: Array<CommentNode>;
 }
 
@@ -615,7 +615,7 @@ export class Parser {
 				break;
 			}
 
-			const op = this.lookahead(() => {
+			let op = this.lookahead(() => {
 				while (this.cursor < this.tokens.length) {
 					const token = this.peek();
 
@@ -627,6 +627,45 @@ export class Parser {
 					return token;
 				}
 			});
+
+			if (op !== undefined && op.kind === TokenKind.Period) {
+				this.skipNewLines();
+
+				// Skip period
+				this.consume();
+
+				const next = this.parseSubExpr(inFunctionCall, inList, inUnaryExpr);
+
+				if (
+					next.kind === NodeKind.SubExpr &&
+					next.value.kind === NodeKind.FnCall &&
+					next.value.name.kind === NodeKind.Identifier
+				) {
+					next.value.name.value.unshift({
+						kind: NodeKind.Expr,
+						value: root,
+						loc: root.loc,
+					});
+
+					next.loc.start = root.loc.start;
+				}
+
+				if (next.kind === NodeKind.SubExpr && next.value.kind === NodeKind.Identifier) {
+					next.value.value.unshift({
+						kind: NodeKind.Expr,
+						value: root,
+						loc: root.loc,
+					});
+
+					next.loc.start = root.loc.start;
+				}
+
+				root = next;
+
+				currentPrecedence = 0;
+
+				continue;
+			}
 
 			if (op !== undefined && inUnaryExpr) {
 				break;
@@ -909,7 +948,7 @@ export class Parser {
 					next.kind === TokenKind.CloseCurly ||
 					next.kind === TokenKind.CloseBracket ||
 					next.kind === TokenKind.CloseParen ||
-					next.kind === TokenKind.Keyword ||
+					(next.kind === TokenKind.Keyword && next.value !== "rec") ||
 					this.isOperator(next)
 				) {
 					break;
@@ -1183,9 +1222,15 @@ export class Parser {
 		// Equal sign
 		this.consume();
 
+		this.skipNewLines();
+
 		const expr = this.parseExpr();
 
 		const semi = this.consume();
+
+		if (semi.kind === TokenKind.CloseCurly) {
+			throw new Error("WTF");
+		}
 
 		return {
 			kind: NodeKind.Attr,
