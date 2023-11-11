@@ -16,6 +16,7 @@
 	"files": [
 		"dist/**"
 	],
+	"types": "./dist/index.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/snowfallorg/sleet.git"
