@@ -1,6 +1,6 @@
 {
 	"name": "@snowfallorg/sleet",
-	"version": "0.12.3",
+	"version": "0.12.4",
 	"description": "A parser for Nix.",
 	"main": "dist/sleet.cjs.js",
 	"scripts": {
