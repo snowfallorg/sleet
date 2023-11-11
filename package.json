@@ -32,9 +32,18 @@
 	},
 	"homepage": "https://github.com/snowfallorg/sleet#readme",
 	"exports": {
-		"import": "./dist/sleet.es.js",
-		"require": "./dist/sleet.cjs.js",
-		"node": "./dist/sleet.cjs.js"
+		"import": {
+			"default": "./dist/sleet.es.js",
+			"types": "./dist/index.d.ts"
+		},
+		"require": {
+			"default": "./dist/sleet.cjs.js",
+			"types": "./dist/index.d.ts"
+		},
+		"node": {
+			"default": "./dist/sleet.cjs.js",
+			"types": "./dist/index.d.ts"
+		}
 	},
 	"devDependencies": {
 		"@types/node": "^20.3.3",
