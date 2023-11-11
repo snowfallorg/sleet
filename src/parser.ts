@@ -472,10 +472,10 @@ export class Parser {
 	}
 
 	getOperatorPrecedence(token: Token): number {
-		// @ts-expect-error
 		// @FIXME(jakehamilton): This is a dumb TS error complaining about indexing
 		// this object. The types need to be updated to be "correct" even though this
 		// does exactly what we want..
+		// @ts-ignore
 		return precedence[token.kind] ?? 0;
 	}
 
